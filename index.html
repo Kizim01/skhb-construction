@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SKHB Construction Ltd — Building Restaurants Worth Returning To</title>
+<meta name="description" content="SKHB Construction Ltd builds and maintains beautiful restaurants across London. Exceptional craftsmanship, on time and on budget.">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,600;9..144,700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --jungle: #2D5A3D;
+  --bamboo: #5C4033;
+  --linen: #F7F3ED;
+  --rice: #8BA888;
+  --stone: #A89279;
+  --volcanic: #1E1E1E;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  color: var(--volcanic);
+  background: #fff;
+  line-height: 1.7;
+}
+
+/* NAV */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(30,30,30,0.95);
+  backdrop-filter: blur(10px);
+  padding: 18px 40px;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.nav-logo {
+  font-family: 'Fraunces', serif;
+  font-size: 22px; font-weight: 700;
+  color: var(--linen);
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+.nav-links { display: flex; gap: 30px; list-style: none; }
+.nav-links a {
+  color: var(--rice);
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  transition: color 0.3s;
+}
+.nav-links a:hover { color: var(--linen); }
+
+/* HAMBURGER */
+.hamburger { display: none; cursor: pointer; flex-direction: column; gap: 5px; }
+.hamburger span { width: 25px; height: 2px; background: var(--linen); transition: 0.3s; }
+
+/* HERO */
+.hero {
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.5)), url('images/img-000.jpg') center/cover no-repeat;
+  display: flex; align-items: center; justify-content: center;
+  text-align: center; color: var(--linen);
+  padding: 0 20px;
+}
+.hero-content h1 {
+  font-family: 'Fraunces', serif;
+  font-size: 56px; font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+.hero-content p {
+  font-size: 20px;
+  font-style: italic;
+  opacity: 0.9;
+  margin-bottom: 35px;
+}
+.hero-btn {
+  display: inline-block;
+  padding: 14px 40px;
+  border: 2px solid var(--rice);
+  color: var(--linen);
+  text-decoration: none;
+  font-family: 'Fraunces', serif;
+  font-size: 16px;
+  letter-spacing: 1px;
+  transition: all 0.3s;
+}
+.hero-btn:hover {
+  background: var(--jungle);
+  border-color: var(--jungle);
+}
+
+/* SECTIONS */
+section { padding: 100px 40px; }
+.section-linen { background: var(--linen); }
+.section-white { background: #fff; }
+.section-dark { background: var(--volcanic); color: var(--linen); }
+.section-jungle { background: var(--jungle); color: var(--linen); }
+
+.section-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 60px;
+}
+.section-header h2 {
+  font-family: 'Fraunces', serif;
+  font-size: 38px; font-weight: 600;
+  color: var(--jungle);
+  margin-bottom: 15px;
+}
+.section-dark .section-header h2,
+.section-jungle .section-header h2 { color: var(--linen); }
+.section-header p {
+  font-size: 16px;
+  color: var(--stone);
+}
+.section-dark .section-header p { color: var(--rice); }
+.section-jungle .section-header p { color: rgba(255,255,255,0.8); }
+.section-header .line {
+  width: 60px; height: 3px;
+  background: var(--rice);
+  margin: 20px auto 0;
+}
+
+/* ABOUT */
+.about-grid {
+  max-width: 1100px; margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+.about-text h3 {
+  font-family: 'Fraunces', serif;
+  font-size: 28px;
+  color: var(--jungle);
+  margin-bottom: 20px;
+}
+.about-text p { margin-bottom: 15px; font-size: 15px; }
+.about-text .highlight {
+  font-family: 'Fraunces', serif;
+  font-size: 18px;
+  color: var(--bamboo);
+  font-style: italic;
+}
+.about-img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* VALUES */
+.values-grid {
+  max-width: 1000px; margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+.value-card {
+  text-align: center;
+  padding: 30px;
+}
+.value-icon {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+.value-card h3 {
+  font-family: 'Fraunces', serif;
+  font-size: 20px;
+  color: var(--linen);
+  margin-bottom: 10px;
+}
+.value-card p {
+  font-size: 14px;
+  color: rgba(255,255,255,0.75);
+}
+
+/* PORTFOLIO */
+.portfolio-grid {
+  max-width: 1200px; margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+.portfolio-item {
+  overflow: hidden;
+  position: relative;
+  aspect-ratio: 4/3;
+  cursor: pointer;
+}
+.portfolio-item img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+.portfolio-item:hover img { transform: scale(1.08); }
+.portfolio-item.wide { grid-column: span 2; }
+.portfolio-item.tall { grid-row: span 2; }
+
+/* SERVICES */
+.services-grid {
+  max-width: 1100px; margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+.service-card {
+  padding: 40px;
+  background: #fff;
+  border-left: 4px solid var(--jungle);
+  box-shadow: 0 2px 15px rgba(0,0,0,0.06);
+}
+.service-card h3 {
+  font-family: 'Fraunces', serif;
+  font-size: 22px;
+  color: var(--jungle);
+  margin-bottom: 12px;
+}
+.service-card p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* SPECIALIST */
+.specialist-tags {
+  max-width: 800px; margin: 30px auto 0;
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 12px;
+}
+.specialist-tag {
+  padding: 8px 24px;
+  border: 1px solid var(--rice);
+  border-radius: 30px;
+  font-size: 14px;
+  color: var(--jungle);
+  background: rgba(139,168,136,0.1);
+}
+
+/* FEATURE STRIP */
+.feature-strip {
+  max-width: 1200px; margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  align-items: stretch;
+}
+.feature-strip.reverse { direction: rtl; }
+.feature-strip.reverse > * { direction: ltr; }
+.feature-img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  min-height: 400px;
+}
+.feature-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px;
+}
+.feature-text h3 {
+  font-family: 'Fraunces', serif;
+  font-size: 28px;
+  color: var(--linen);
+  margin-bottom: 15px;
+}
+.feature-text p {
+  font-size: 15px;
+  color: rgba(255,255,255,0.8);
+  margin-bottom: 10px;
+}
+
+/* CONTACT */
+.contact-content {
+  max-width: 600px; margin: 0 auto;
+  text-align: center;
+}
+.contact-content p {
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+.contact-info a {
+  color: var(--jungle);
+  text-decoration: none;
+  font-size: 18px;
+  font-family: 'Fraunces', serif;
+  transition: color 0.3s;
+}
+.contact-info a:hover { color: var(--bamboo); }
+
+/* FOOTER */
+footer {
+  background: var(--volcanic);
+  color: var(--stone);
+  text-align: center;
+  padding: 40px;
+  font-size: 13px;
+}
+footer a { color: var(--rice); text-decoration: none; }
+
+/* LIGHTBOX */
+.lightbox {
+  display: none;
+  position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.92);
+  z-index: 200;
+  align-items: center; justify-content: center;
+  cursor: pointer;
+}
+.lightbox.active { display: flex; }
+.lightbox img {
+  max-width: 90%; max-height: 90vh;
+  object-fit: contain;
+  box-shadow: 0 0 40px rgba(0,0,0,0.5);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+  .nav-links.open {
+    display: flex; flex-direction: column;
+    position: absolute; top: 60px; right: 20px;
+    background: rgba(30,30,30,0.98);
+    padding: 20px 30px;
+    border-radius: 4px;
+    gap: 15px;
+  }
+  .hero-content h1 { font-size: 34px; }
+  .hero-content p { font-size: 16px; }
+  .about-grid { grid-template-columns: 1fr; gap: 30px; }
+  .values-grid { grid-template-columns: 1fr; gap: 20px; }
+  .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
+  .portfolio-item.wide { grid-column: span 1; }
+  .services-grid { grid-template-columns: 1fr; }
+  .feature-strip, .feature-strip.reverse { grid-template-columns: 1fr; }
+  .feature-text { padding: 40px 20px; }
+  section { padding: 60px 20px; }
+  .section-header h2 { font-size: 28px; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">SKHB</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#about">About</a></li>
+    <li><a href="#portfolio">Portfolio</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Building Restaurants<br>Worth Returning To</h1>
+    <p>Exceptional craftsmanship. On time. On budget.</p>
+    <a href="#contact" class="hero-btn">Get In Touch</a>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section-linen">
+  <div class="about-grid">
+    <div class="about-text">
+      <h3>We Build Where People Gather</h3>
+      <p>SKHB Construction Ltd is a London-based construction company specialising in building and maintaining beautiful restaurant spaces. From complete builds to ongoing maintenance, we handle everything — kitchens, electrics, plumbing, tiling, flooring, painting, and every finishing detail.</p>
+      <p>Founded by Sununu, SKHB is built on strong client relationships and honest communication. We listen first, plan precisely, and deliver exceptional workmanship within your budget and timeline.</p>
+      <p class="highlight">We're not the biggest. We're the ones who get it right.</p>
+    </div>
+    <img src="images/img-002.jpg" alt="Elegant restaurant interior by SKHB" class="about-img">
+  </div>
+</section>
+
+<!-- VALUES -->
+<section class="section-jungle" id="values">
+  <div class="section-header">
+    <h2>What We Stand For</h2>
+    <div class="line"></div>
+  </div>
+  <div class="values-grid">
+    <div class="value-card">
+      <div class="value-icon">🤝</div>
+      <h3>Relationships</h3>
+      <p>We build long-term partnerships, not just restaurants. Calm, friendly, and understanding — always.</p>
+    </div>
+    <div class="value-card">
+      <div class="value-icon">🎯</div>
+      <h3>Precision</h3>
+      <p>Measured, careful, no shortcuts. Every detail matters, every timeline is respected.</p>
+    </div>
+    <div class="value-card">
+      <div class="value-icon">🔨</div>
+      <h3>Craftsmanship</h3>
+      <p>Exceptional quality in every detail. We take pride in work that speaks for itself.</p>
+    </div>
+    <div class="value-card">
+      <div class="value-icon">⏰</div>
+      <h3>Reliability</h3>
+      <p>On time, on budget, every time. No surprises, no drama — just delivery.</p>
+    </div>
+    <div class="value-card">
+      <div class="value-icon">💎</div>
+      <h3>Quality</h3>
+      <p>The best result possible within your budget. Honest about what's achievable.</p>
+    </div>
+    <div class="value-card">
+      <div class="value-icon">👁️</div>
+      <h3>Honesty</h3>
+      <p>Transparent communication from start to finish. No hidden costs, no empty promises.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="portfolio" class="section-white">
+  <div class="section-header">
+    <h2>Our Work</h2>
+    <p>A selection of restaurant builds and fit-outs across London</p>
+    <div class="line"></div>
+  </div>
+  <div class="portfolio-grid">
+    <div class="portfolio-item wide" onclick="openLightbox('images/img-000.jpg')">
+      <img src="images/img-000.jpg" alt="Restaurant interior" loading="lazy">
+    </div>
+    <div class="portfolio-item" onclick="openLightbox('images/img-003.jpg')">
+      <img src="images/img-003.jpg" alt="Restaurant dining area" loading="lazy">
+    </div>
+    <div class="portfolio-item" onclick="openLightbox('images/img-004.jpg')">
+      <img src="images/img-004.jpg" alt="Restaurant bar and seating" loading="lazy">
+    </div>
+    <div class="portfolio-item" onclick="openLightbox('images/img-005.jpg')">
+      <img src="images/img-005.jpg" alt="Private dining room" loading="lazy">
+    </div>
+    <div class="portfolio-item wide" onclick="openLightbox('images/img-010.jpg')">
+      <img src="images/img-010.jpg" alt="Bar and dining space" loading="lazy">
+    </div>
+    <div class="portfolio-item" onclick="openLightbox('images/img-001.jpg')">
+      <img src="images/img-001.jpg" alt="Restaurant interior" loading="lazy">
+    </div>
+    <div class="portfolio-item" onclick="openLightbox('images/img-006.jpg')">
+      <img src="images/img-006.jpg" alt="Restaurant detail" loading="lazy">
+    </div>
+    <div class="portfolio-item" onclick="openLightbox('images/img-007.jpg')">
+      <img src="images/img-007.jpg" alt="Restaurant build" loading="lazy">
+    </div>
+    <div class="portfolio-item" onclick="openLightbox('images/img-008.jpg')">
+      <img src="images/img-008.jpg" alt="Interior detail" loading="lazy">
+    </div>
+    <div class="portfolio-item" onclick="openLightbox('images/img-009.jpg')">
+      <img src="images/img-009.jpg" alt="Dining space" loading="lazy">
+    </div>
+    <div class="portfolio-item wide" onclick="openLightbox('images/img-012.jpg')">
+      <img src="images/img-012.jpg" alt="Cocktail bar" loading="lazy">
+    </div>
+    <div class="portfolio-item" onclick="openLightbox('images/img-011.jpg')">
+      <img src="images/img-011.jpg" alt="Restaurant detail" loading="lazy">
+    </div>
+    <div class="portfolio-item" onclick="openLightbox('images/img-013.jpg')">
+      <img src="images/img-013.jpg" alt="Restaurant feature" loading="lazy">
+    </div>
+    <div class="portfolio-item" onclick="openLightbox('images/img-014.jpg')">
+      <img src="images/img-014.jpg" alt="Restaurant interior" loading="lazy">
+    </div>
+    <div class="portfolio-item" onclick="openLightbox('images/img-015.jpg')">
+      <img src="images/img-015.jpg" alt="Build detail" loading="lazy">
+    </div>
+    <div class="portfolio-item" onclick="openLightbox('images/img-016.jpg')">
+      <img src="images/img-016.jpg" alt="Construction work" loading="lazy">
+    </div>
+    <div class="portfolio-item wide" onclick="openLightbox('images/img-017.jpg')">
+      <img src="images/img-017.jpg" alt="Restaurant feature" loading="lazy">
+    </div>
+    <div class="portfolio-item wide" onclick="openLightbox('images/img-018.jpg')">
+      <img src="images/img-018.jpg" alt="Outdoor venue setup" loading="lazy">
+    </div>
+    <div class="portfolio-item" onclick="openLightbox('images/img-019.jpg')">
+      <img src="images/img-019.jpg" alt="Venue construction" loading="lazy">
+    </div>
+    <div class="portfolio-item wide" onclick="openLightbox('images/img-020.jpg')">
+      <img src="images/img-020.jpg" alt="Tanqueray Terrace" loading="lazy">
+    </div>
+    <div class="portfolio-item" onclick="openLightbox('images/img-021.jpg')">
+      <img src="images/img-021.jpg" alt="Outdoor bar" loading="lazy">
+    </div>
+    <div class="portfolio-item" onclick="openLightbox('images/img-022.jpg')">
+      <img src="images/img-022.jpg" alt="Venue detail" loading="lazy">
+    </div>
+    <div class="portfolio-item wide" onclick="openLightbox('images/img-023.jpg')">
+      <img src="images/img-023.jpg" alt="Event space" loading="lazy">
+    </div>
+    <div class="portfolio-item" onclick="openLightbox('images/img-024.jpg')">
+      <img src="images/img-024.jpg" alt="Venue build" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- FEATURE: KUDU GRILL -->
+<section class="section-dark" style="padding:0">
+  <div class="feature-strip">
+    <img src="images/img-004.jpg" alt="Kudu Grill interior" class="feature-img">
+    <div class="feature-text">
+      <h3>Kudu Grill</h3>
+      <p>57 Nunhead Lane, London SE15 3TR</p>
+      <p>A complete restaurant build — tables, mirrors, floors, kitchen, counters, electrics, plumbing, tiling, and painting. Every detail crafted to create a warm, sophisticated dining experience.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="section-linen">
+  <div class="section-header">
+    <h2>What We Do</h2>
+    <p>End-to-end construction and maintenance for restaurants</p>
+    <div class="line"></div>
+  </div>
+  <div class="services-grid">
+    <div class="service-card">
+      <h3>Full Restaurant Builds</h3>
+      <p>From empty shell to opening night. We manage the entire build — structure, kitchen, electrics, plumbing, floors, walls, and finishing touches.</p>
+    </div>
+    <div class="service-card">
+      <h3>Kitchen Fit-Outs</h3>
+      <p>Functional, durable, and built to handle the heat. We design and install kitchens that work as hard as your chefs.</p>
+    </div>
+    <div class="service-card">
+      <h3>Renovations &amp; Refurbishments</h3>
+      <p>Breathe new life into your space without shutting down longer than necessary. We work efficiently to minimise disruption.</p>
+    </div>
+    <div class="service-card">
+      <h3>Ongoing Maintenance</h3>
+      <p>Keep your restaurant looking and running its best. We offer reliable maintenance to protect your investment.</p>
+    </div>
+  </div>
+  <div class="specialist-tags">
+    <span class="specialist-tag">Tiling</span>
+    <span class="specialist-tag">Flooring</span>
+    <span class="specialist-tag">Electrics</span>
+    <span class="specialist-tag">Plumbing</span>
+    <span class="specialist-tag">Painting</span>
+    <span class="specialist-tag">Counters</span>
+    <span class="specialist-tag">Mirrors</span>
+    <span class="specialist-tag">Bespoke Joinery</span>
+  </div>
+</section>
+
+<!-- FEATURE 2 -->
+<section class="section-dark" style="padding:0">
+  <div class="feature-strip reverse">
+    <img src="images/img-020.jpg" alt="Tanqueray Terrace outdoor venue" class="feature-img">
+    <div class="feature-text">
+      <h3>Outdoor &amp; Pop-Up Venues</h3>
+      <p>From permanent restaurants to pop-up bars and outdoor terraces — we bring the same precision and craftsmanship to every type of hospitality space.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section-white">
+  <div class="section-header">
+    <h2>Let's Talk</h2>
+    <p>Whether you're opening your first restaurant or refreshing an established favourite, we'd love to hear from you.</p>
+    <div class="line"></div>
+  </div>
+  <div class="contact-content">
+    <p>Ready to start your project? Get in touch and let's discuss how we can bring your vision to life.</p>
+    <div class="contact-info">
+      <a href="mailto:info@skhbconstruction.co.uk">info@skhbconstruction.co.uk</a>
+      <a href="tel:+44">Call Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>&copy; 2026 SKHB Construction Ltd. All rights reserved.</p>
+  <p style="margin-top:8px"><a href="https://www.kuducollective.com/kudu-grill">Kudu Grill</a> · London, UK</p>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <img id="lightboxImg" src="" alt="Portfolio image">
+</div>
+
+<script>
+function openLightbox(src) {
+  document.getElementById('lightboxImg').src = src;
+  document.getElementById('lightbox').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('active');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', e => { if(e.key === 'Escape') closeLightbox(); });
+</script>
+
+</body>
+</html>
