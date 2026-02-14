@@ -3,8 +3,32 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SKHB Construction Ltd — Building Restaurants Worth Returning To</title>
-<meta name="description" content="SKHB Construction Ltd builds and maintains beautiful restaurants across London. Exceptional craftsmanship, on time and on budget.">
+<title>SKHB Construction Ltd — Restaurant Construction &amp; Fit-Out London</title>
+<meta name="description" content="SKHB Construction Ltd — London restaurant builders specialising in full builds, kitchen fit-outs, renovations and maintenance. Kudu Grill, Casa do Frango, Lisboeta and more. On time, on budget.">
+<meta name="keywords" content="restaurant construction London, restaurant fit-out, kitchen fit-out London, restaurant builder, hospitality construction, bar construction London, SKHB Construction">
+<meta property="og:title" content="SKHB Construction Ltd — Building Restaurants Worth Returning To">
+<meta property="og:description" content="London restaurant builders. Full builds, kitchen fit-outs, renovations and maintenance. Exceptional craftsmanship, delivered on time and on budget.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://kizim01.github.io/skhb-construction/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://kizim01.github.io/skhb-construction/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "SKHB Construction Ltd",
+  "description": "London restaurant builders specialising in full builds, kitchen fit-outs, renovations and maintenance.",
+  "url": "https://kizim01.github.io/skhb-construction/",
+  "areaServed": "London",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "London",
+    "addressCountry": "GB"
+  },
+  "serviceType": ["Restaurant Construction", "Kitchen Fit-Out", "Restaurant Renovation", "Bar Construction", "Hospitality Maintenance"],
+  "knowsAbout": ["Restaurant Construction", "Kitchen Installation", "Tiling", "Plumbing", "Electrics", "Bespoke Joinery"]
+}
+</script>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,600;9..144,700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -286,16 +310,60 @@ section { padding: 80px 24px; }
   text-align: center;
 }
 .contact-content p { font-size: 15px; margin-bottom: 28px; }
-.contact-info {
-  display: flex; flex-direction: column;
-  gap: 12px; align-items: center;
+.contact-form {
+  text-align: left;
+  display: flex; flex-direction: column; gap: 16px;
 }
-.contact-info a {
+.contact-form label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--bamboo);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 14px;
+  color: var(--volcanic);
+  background: var(--linen);
+  transition: border-color 0.3s;
+  margin-top: 4px;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--jungle);
+}
+.contact-form textarea { resize: vertical; min-height: 120px; }
+.contact-form button {
+  padding: 14px 36px;
+  background: var(--jungle);
+  color: var(--linen);
+  border: none;
+  font-family: 'Fraunces', serif;
+  font-size: 15px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background 0.3s;
+  align-self: center;
+  border-radius: 4px;
+}
+.contact-form button:hover { background: var(--bamboo); }
+.contact-alt {
+  margin-top: 24px;
+  font-size: 14px;
+  color: var(--stone);
+}
+.contact-alt a {
   color: var(--jungle); text-decoration: none;
-  font-size: 17px; font-family: 'Fraunces', serif;
-  transition: color 0.3s;
+  font-weight: 700;
 }
-.contact-info a:hover { color: var(--bamboo); }
+.contact-alt a:hover { color: var(--bamboo); }
 
 /* FOOTER */
 footer {
@@ -437,7 +505,7 @@ footer a { color: var(--rice); text-decoration: none; }
     <div class="project">
       <div class="project-header">
         <h3>Kudu Grill</h3>
-        <span>57 Nunhead Lane, London SE15</span>
+        <span>57 Nunhead Ln, London SE15 3TR</span>
       </div>
       <div class="carousel-wrap" data-carousel>
         <div class="carousel-track">
@@ -453,10 +521,10 @@ footer a { color: var(--rice); text-decoration: none; }
       </div>
     </div>
 
-    <!-- PRIVATE DINING / WINE BAR -->
+    <!-- LISBOETA -->
     <div class="project">
       <div class="project-header">
-        <h3>Portuguese Wine Bar &amp; Private Dining</h3>
+        <h3>Lisboeta — Private Dining &amp; Cellar</h3>
         <span>London</span>
       </div>
       <div class="carousel-wrap" data-carousel>
@@ -472,11 +540,11 @@ footer a { color: var(--rice); text-decoration: none; }
       </div>
     </div>
 
-    <!-- BISTRO / BAR -->
+    <!-- CASA DO FRANGO -->
     <div class="project">
       <div class="project-header">
-        <h3>Botanical Bistro &amp; Bar</h3>
-        <span>London</span>
+        <h3>Casa do Frango</h3>
+        <span>32 Southwark St, London SE1 1TU</span>
       </div>
       <div class="carousel-wrap" data-carousel>
         <div class="carousel-track">
@@ -490,11 +558,11 @@ footer a { color: var(--rice); text-decoration: none; }
       </div>
     </div>
 
-    <!-- COCKTAIL BAR / LOUNGE -->
+    <!-- REVEREND J W SIMPSON -->
     <div class="project">
       <div class="project-header">
-        <h3>Cocktail Bar &amp; Lounge</h3>
-        <span>London</span>
+        <h3>Reverend J W Simpson</h3>
+        <span>32 Goodge St, London W1T 2QJ</span>
       </div>
       <div class="carousel-wrap" data-carousel>
         <div class="carousel-track">
@@ -511,11 +579,11 @@ footer a { color: var(--rice); text-decoration: none; }
       </div>
     </div>
 
-    <!-- TANQUERAY TERRACE -->
+    <!-- TANQUERAY ACTIVATION AT VINEGAR YARD -->
     <div class="project">
       <div class="project-header">
-        <h3>Tanqueray Terrace — Vinegar Yard</h3>
-        <span>London Bridge</span>
+        <h3>Tanqueray Activation — Vinegar Yard</h3>
+        <span>72-82 St Thomas St, London SE1 3QX</span>
       </div>
       <div class="carousel-wrap" data-carousel>
         <div class="carousel-track">
@@ -582,17 +650,32 @@ footer a { color: var(--rice); text-decoration: none; }
   </div>
   <div class="contact-content">
     <p>Every great restaurant starts with a conversation. Tell us about your space, your vision, and your timeline — we'll take it from there.</p>
-    <div class="contact-info">
-      <a href="mailto:info@skhbconstruction.co.uk">info@skhbconstruction.co.uk</a>
-      <a href="tel:+44">Call Us</a>
-    </div>
+    <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <div>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required placeholder="Your name">
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required placeholder="your@email.com">
+      </div>
+      <div>
+        <label for="phone">Phone <span style="font-weight:400;text-transform:none">(optional)</span></label>
+        <input type="tel" id="phone" name="phone" placeholder="Your phone number">
+      </div>
+      <div>
+        <label for="message">Tell us about your project</label>
+        <textarea id="message" name="message" required placeholder="What are you looking to build or renovate? Any timeline or budget in mind?"></textarea>
+      </div>
+      <button type="submit">Send Message</button>
+    </form>
+    <p class="contact-alt">Or email us directly at <a href="mailto:info@skhbconstruction.co.uk">info@skhbconstruction.co.uk</a></p>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
   <p>&copy; 2026 SKHB Construction Ltd. All rights reserved.</p>
-  <p style="margin-top:6px">London, UK</p>
 </footer>
 
 <!-- LIGHTBOX -->
