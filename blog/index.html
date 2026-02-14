@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blog — SKHB Construction Ltd</title>
+<meta name="description" content="Insights, tips and advice on restaurant construction, fit-outs and renovation from London's specialist restaurant builders.">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,600;9..144,700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --jungle: #2D5A3D;
+  --bamboo: #5C4033;
+  --linen: #F7F3ED;
+  --rice: #8BA888;
+  --stone: #A89279;
+  --volcanic: #1E1E1E;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  color: var(--volcanic);
+  background: var(--linen);
+  line-height: 1.7;
+}
+nav {
+  background: rgba(30,30,30,0.95);
+  backdrop-filter: blur(10px);
+  padding: 16px 40px;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.nav-logo {
+  font-family: 'Fraunces', serif;
+  font-size: 20px; font-weight: 700;
+  color: var(--linen);
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+.nav-links { display: flex; gap: 28px; list-style: none; }
+.nav-links a {
+  color: var(--rice); text-decoration: none;
+  font-size: 13px; letter-spacing: 0.5px;
+  text-transform: uppercase; transition: color 0.3s;
+}
+.nav-links a:hover { color: var(--linen); }
+.hamburger { display: none; cursor: pointer; flex-direction: column; gap: 5px; background: none; border: none; padding: 5px; }
+.hamburger span { width: 24px; height: 2px; background: var(--linen); display: block; }
+
+.blog-header {
+  background: var(--jungle);
+  color: var(--linen);
+  padding: 60px 24px;
+  text-align: center;
+}
+.blog-header h1 {
+  font-family: 'Fraunces', serif;
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+.blog-header p { font-size: 15px; opacity: 0.8; }
+
+.blog-grid {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+.blog-card {
+  background: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-decoration: none;
+  color: var(--volcanic);
+  display: block;
+}
+.blog-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+.blog-card img {
+  width: 100%; height: 220px;
+  object-fit: cover;
+}
+.blog-card-body {
+  padding: 24px;
+}
+.blog-card-body .date {
+  font-size: 12px;
+  color: var(--stone);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+.blog-card-body h2 {
+  font-family: 'Fraunces', serif;
+  font-size: 20px;
+  color: var(--jungle);
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+.blog-card-body p {
+  font-size: 14px;
+  color: #666;
+}
+.read-more {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 13px;
+  color: var(--jungle);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+footer {
+  background: var(--volcanic);
+  color: var(--stone);
+  text-align: center;
+  padding: 32px;
+  font-size: 13px;
+  margin-top: 50px;
+}
+footer a { color: var(--rice); text-decoration: none; }
+
+@media (max-width: 768px) {
+  nav { padding: 14px 20px; }
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+  .nav-links.open {
+    display: flex; flex-direction: column;
+    position: absolute; top: 56px; right: 16px;
+    background: rgba(30,30,30,0.98);
+    padding: 16px 24px; border-radius: 4px; gap: 12px;
+    z-index: 100;
+  }
+  .blog-grid { grid-template-columns: 1fr; }
+  .blog-header h1 { font-size: 28px; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="../" class="nav-logo">SKHB</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="../#about">About</a></li>
+    <li><a href="../#portfolio">Portfolio</a></li>
+    <li><a href="../#services">Services</a></li>
+    <li><a href="./">Blog</a></li>
+    <li><a href="../#contact">Contact</a></li>
+  </ul>
+  <button class="hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="blog-header">
+  <h1>Insights &amp; Advice</h1>
+  <p>Tips on restaurant construction, fit-outs and making your space work harder</p>
+</div>
+
+<div class="blog-grid">
+
+  <a href="5-things-before-restaurant-fit-out.html" class="blog-card">
+    <img src="../images/img-004.jpg" alt="Restaurant interior">
+    <div class="blog-card-body">
+      <div class="date">February 2026</div>
+      <h2>5 Things to Consider Before a Restaurant Fit-Out</h2>
+      <p>Planning a new restaurant or refurbishing an existing one? Here's what every owner should think about before the first hammer swings.</p>
+      <span class="read-more">Read more →</span>
+    </div>
+  </a>
+
+  <a href="why-one-team-matters.html" class="blog-card">
+    <img src="../images/img-010.jpg" alt="Bar and dining space">
+    <div class="blog-card-body">
+      <div class="date">February 2026</div>
+      <h2>Why Using One Team for Your Entire Build Saves Time and Money</h2>
+      <p>Managing multiple subcontractors is stressful and expensive. Here's why a single team approach delivers better results.</p>
+      <span class="read-more">Read more →</span>
+    </div>
+  </a>
+
+  <a href="kitchen-design-mistakes.html" class="blog-card">
+    <img src="../images/img-005.jpg" alt="Restaurant kitchen area">
+    <div class="blog-card-body">
+      <div class="date">February 2026</div>
+      <h2>Common Kitchen Design Mistakes That Cost Restaurants Thousands</h2>
+      <p>A poorly designed kitchen slows service and burns money. We've seen these mistakes too many times — here's how to avoid them.</p>
+      <span class="read-more">Read more →</span>
+    </div>
+  </a>
+
+</div>
+
+<footer>
+  <p>&copy; 2026 SKHB Construction Ltd. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
