@@ -15,16 +15,14 @@
   --stone: #A89279;
   --volcanic: #1E1E1E;
 }
-
 * { margin: 0; padding: 0; box-sizing: border-box; }
-
 html { scroll-behavior: smooth; }
-
 body {
   font-family: 'Libre Baskerville', Georgia, serif;
   color: var(--volcanic);
   background: #fff;
   line-height: 1.7;
+  overflow-x: hidden;
 }
 
 /* NAV */
@@ -32,264 +30,269 @@ nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
   background: rgba(30,30,30,0.95);
   backdrop-filter: blur(10px);
-  padding: 18px 40px;
+  padding: 16px 40px;
   display: flex; justify-content: space-between; align-items: center;
 }
 .nav-logo {
   font-family: 'Fraunces', serif;
-  font-size: 22px; font-weight: 700;
+  font-size: 20px; font-weight: 700;
   color: var(--linen);
   text-decoration: none;
   letter-spacing: 1px;
 }
-.nav-links { display: flex; gap: 30px; list-style: none; }
+.nav-links { display: flex; gap: 28px; list-style: none; }
 .nav-links a {
   color: var(--rice);
   text-decoration: none;
-  font-size: 14px;
+  font-size: 13px;
   letter-spacing: 0.5px;
   transition: color 0.3s;
+  text-transform: uppercase;
 }
 .nav-links a:hover { color: var(--linen); }
-
-/* HAMBURGER */
-.hamburger { display: none; cursor: pointer; flex-direction: column; gap: 5px; }
-.hamburger span { width: 25px; height: 2px; background: var(--linen); transition: 0.3s; }
+.hamburger { display: none; cursor: pointer; flex-direction: column; gap: 5px; background: none; border: none; padding: 5px; }
+.hamburger span { width: 24px; height: 2px; background: var(--linen); transition: 0.3s; display: block; }
 
 /* HERO */
 .hero {
   height: 100vh;
-  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.5)), url('images/img-000.jpg') center/cover no-repeat;
+  background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.5)), url('images/img-000.jpg') center/cover no-repeat;
   display: flex; align-items: center; justify-content: center;
   text-align: center; color: var(--linen);
   padding: 0 20px;
 }
-.hero-content h1 {
+.hero h1 {
   font-family: 'Fraunces', serif;
-  font-size: 56px; font-weight: 700;
-  margin-bottom: 20px;
-  line-height: 1.2;
+  font-size: clamp(32px, 5vw, 56px);
+  font-weight: 700;
+  margin-bottom: 16px;
+  line-height: 1.15;
 }
-.hero-content p {
-  font-size: 20px;
+.hero p {
+  font-size: clamp(15px, 2vw, 20px);
   font-style: italic;
   opacity: 0.9;
-  margin-bottom: 35px;
+  margin-bottom: 32px;
 }
-.hero-btn {
+.btn {
   display: inline-block;
-  padding: 14px 40px;
+  padding: 13px 36px;
   border: 2px solid var(--rice);
   color: var(--linen);
   text-decoration: none;
   font-family: 'Fraunces', serif;
-  font-size: 16px;
+  font-size: 15px;
   letter-spacing: 1px;
   transition: all 0.3s;
 }
-.hero-btn:hover {
-  background: var(--jungle);
-  border-color: var(--jungle);
-}
+.btn:hover { background: var(--jungle); border-color: var(--jungle); }
 
 /* SECTIONS */
-section { padding: 100px 40px; }
-.section-linen { background: var(--linen); }
-.section-white { background: #fff; }
-.section-dark { background: var(--volcanic); color: var(--linen); }
-.section-jungle { background: var(--jungle); color: var(--linen); }
+section { padding: 80px 24px; }
+.bg-linen { background: var(--linen); }
+.bg-white { background: #fff; }
+.bg-dark { background: var(--volcanic); color: var(--linen); }
+.bg-jungle { background: var(--jungle); color: var(--linen); }
 
 .section-header {
   text-align: center;
-  max-width: 700px;
-  margin: 0 auto 60px;
+  max-width: 600px;
+  margin: 0 auto 50px;
 }
 .section-header h2 {
   font-family: 'Fraunces', serif;
-  font-size: 38px; font-weight: 600;
-  color: var(--jungle);
-  margin-bottom: 15px;
+  font-size: clamp(26px, 3.5vw, 36px);
+  font-weight: 600;
+  margin-bottom: 12px;
 }
-.section-dark .section-header h2,
-.section-jungle .section-header h2 { color: var(--linen); }
 .section-header p {
-  font-size: 16px;
+  font-size: 15px;
   color: var(--stone);
 }
-.section-dark .section-header p { color: var(--rice); }
-.section-jungle .section-header p { color: rgba(255,255,255,0.8); }
+.bg-dark .section-header p { color: var(--rice); }
+.bg-jungle .section-header h2 { color: var(--linen); }
 .section-header .line {
-  width: 60px; height: 3px;
+  width: 50px; height: 2px;
   background: var(--rice);
-  margin: 20px auto 0;
+  margin: 16px auto 0;
 }
 
 /* ABOUT */
 .about-grid {
-  max-width: 1100px; margin: 0 auto;
+  max-width: 1060px; margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 60px;
+  gap: 50px;
   align-items: center;
 }
 .about-text h3 {
   font-family: 'Fraunces', serif;
-  font-size: 28px;
+  font-size: 26px;
   color: var(--jungle);
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
-.about-text p { margin-bottom: 15px; font-size: 15px; }
+.about-text p { margin-bottom: 14px; font-size: 15px; }
 .about-text .highlight {
   font-family: 'Fraunces', serif;
-  font-size: 18px;
+  font-size: 17px;
   color: var(--bamboo);
   font-style: italic;
+  margin-top: 6px;
 }
 .about-img {
+  width: 100%; height: 450px;
+  object-fit: cover;
+}
+
+/* VALUES — compact horizontal strip */
+.values-strip {
+  max-width: 1060px; margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0;
+  border-top: 2px solid var(--rice);
+  border-bottom: 2px solid var(--rice);
+}
+.values-strip .v-item {
+  text-align: center;
+  padding: 28px 12px;
+  border-right: 1px solid rgba(139,168,136,0.3);
+}
+.values-strip .v-item:last-child { border-right: none; }
+.values-strip h4 {
+  font-family: 'Fraunces', serif;
+  font-size: 15px;
+  color: var(--linen);
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+.values-strip p {
+  font-size: 12px;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.5;
+}
+
+/* PORTFOLIO — carousel per project */
+.projects { max-width: 1100px; margin: 0 auto; }
+.project { margin-bottom: 60px; }
+.project:last-child { margin-bottom: 0; }
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 16px;
+  padding: 0 4px;
+}
+.project-header h3 {
+  font-family: 'Fraunces', serif;
+  font-size: 24px;
+  color: var(--jungle);
+}
+.project-header span {
+  font-size: 13px;
+  color: var(--stone);
+  font-style: italic;
+}
+
+/* Carousel */
+.carousel-wrap {
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+}
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+  will-change: transform;
+}
+.carousel-track img {
+  flex: 0 0 100%;
   width: 100%;
   height: 500px;
   object-fit: cover;
-  border-radius: 4px;
-}
-
-/* VALUES */
-.values-grid {
-  max-width: 1000px; margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-}
-.value-card {
-  text-align: center;
-  padding: 30px;
-  border-top: 2px solid var(--rice);
-}
-.value-card h3 {
-  font-family: 'Fraunces', serif;
-  font-size: 20px;
-  color: var(--linen);
-  margin: 15px 0 8px;
-  letter-spacing: 0.5px;
-}
-.value-card p {
-  font-size: 14px;
-  color: rgba(255,255,255,0.75);
-  font-style: italic;
-}
-
-/* PORTFOLIO */
-.portfolio-grid {
-  max-width: 1200px; margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
-}
-.portfolio-item {
-  overflow: hidden;
-  position: relative;
-  aspect-ratio: 4/3;
   cursor: pointer;
 }
-.portfolio-item img {
-  width: 100%; height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s;
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  border: none;
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background 0.3s;
+  display: flex; align-items: center; justify-content: center;
+  z-index: 2;
 }
-.portfolio-item:hover img { transform: scale(1.08); }
-.portfolio-item.wide { grid-column: span 2; }
-.portfolio-item.tall { grid-row: span 2; }
+.carousel-btn:hover { background: rgba(0,0,0,0.75); }
+.carousel-btn.prev { left: 12px; }
+.carousel-btn.next { right: 12px; }
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 12px;
+}
+.carousel-dots .dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--rice);
+  opacity: 0.35;
+  cursor: pointer;
+  transition: opacity 0.3s;
+  border: none;
+}
+.carousel-dots .dot.active { opacity: 1; }
 
 /* SERVICES */
 .services-grid {
-  max-width: 1100px; margin: 0 auto;
+  max-width: 1060px; margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 40px;
+  gap: 30px;
 }
 .service-card {
-  padding: 40px;
+  padding: 32px;
   background: #fff;
-  border-left: 4px solid var(--jungle);
-  box-shadow: 0 2px 15px rgba(0,0,0,0.06);
+  border-left: 3px solid var(--jungle);
+  box-shadow: 0 1px 10px rgba(0,0,0,0.05);
 }
 .service-card h3 {
   font-family: 'Fraunces', serif;
-  font-size: 22px;
+  font-size: 20px;
   color: var(--jungle);
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
-.service-card p {
-  font-size: 14px;
-  color: #555;
-}
-
-/* SPECIALIST */
+.service-card p { font-size: 14px; color: #555; }
 .specialist-tags {
-  max-width: 800px; margin: 30px auto 0;
-  display: flex; flex-wrap: wrap; justify-content: center; gap: 12px;
+  max-width: 700px; margin: 24px auto 0;
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;
 }
 .specialist-tag {
-  padding: 8px 24px;
+  padding: 6px 20px;
   border: 1px solid var(--rice);
-  border-radius: 30px;
-  font-size: 14px;
+  border-radius: 24px;
+  font-size: 13px;
   color: var(--jungle);
-  background: rgba(139,168,136,0.1);
-}
-
-/* FEATURE STRIP */
-.feature-strip {
-  max-width: 1200px; margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0;
-  align-items: stretch;
-}
-.feature-strip.reverse { direction: rtl; }
-.feature-strip.reverse > * { direction: ltr; }
-.feature-img {
-  width: 100%; height: 100%;
-  object-fit: cover;
-  min-height: 400px;
-}
-.feature-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 60px;
-}
-.feature-text h3 {
-  font-family: 'Fraunces', serif;
-  font-size: 28px;
-  color: var(--linen);
-  margin-bottom: 15px;
-}
-.feature-text p {
-  font-size: 15px;
-  color: rgba(255,255,255,0.8);
-  margin-bottom: 10px;
+  background: rgba(139,168,136,0.08);
 }
 
 /* CONTACT */
 .contact-content {
-  max-width: 600px; margin: 0 auto;
+  max-width: 550px; margin: 0 auto;
   text-align: center;
 }
-.contact-content p {
-  font-size: 16px;
-  margin-bottom: 30px;
-}
+.contact-content p { font-size: 15px; margin-bottom: 28px; }
 .contact-info {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  align-items: center;
+  display: flex; flex-direction: column;
+  gap: 12px; align-items: center;
 }
 .contact-info a {
-  color: var(--jungle);
-  text-decoration: none;
-  font-size: 18px;
-  font-family: 'Fraunces', serif;
+  color: var(--jungle); text-decoration: none;
+  font-size: 17px; font-family: 'Fraunces', serif;
   transition: color 0.3s;
 }
 .contact-info a:hover { color: var(--bamboo); }
@@ -299,7 +302,7 @@ footer {
   background: var(--volcanic);
   color: var(--stone);
   text-align: center;
-  padding: 40px;
+  padding: 32px;
   font-size: 13px;
 }
 footer a { color: var(--rice); text-decoration: none; }
@@ -315,34 +318,40 @@ footer a { color: var(--rice); text-decoration: none; }
 }
 .lightbox.active { display: flex; }
 .lightbox img {
-  max-width: 90%; max-height: 90vh;
+  max-width: 92%; max-height: 92vh;
   object-fit: contain;
-  box-shadow: 0 0 40px rgba(0,0,0,0.5);
 }
 
 /* RESPONSIVE */
+@media (max-width: 1024px) {
+  .values-strip { grid-template-columns: repeat(3, 1fr); }
+  .carousel-track img { height: 400px; }
+}
 @media (max-width: 768px) {
+  nav { padding: 14px 20px; }
   .nav-links { display: none; }
   .hamburger { display: flex; }
   .nav-links.open {
     display: flex; flex-direction: column;
-    position: absolute; top: 60px; right: 20px;
+    position: absolute; top: 56px; right: 16px;
     background: rgba(30,30,30,0.98);
-    padding: 20px 30px;
+    padding: 16px 24px;
     border-radius: 4px;
-    gap: 15px;
+    gap: 12px;
   }
-  .hero-content h1 { font-size: 34px; }
-  .hero-content p { font-size: 16px; }
-  .about-grid { grid-template-columns: 1fr; gap: 30px; }
-  .values-grid { grid-template-columns: 1fr; gap: 20px; }
-  .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
-  .portfolio-item.wide { grid-column: span 1; }
-  .services-grid { grid-template-columns: 1fr; }
-  .feature-strip, .feature-strip.reverse { grid-template-columns: 1fr; }
-  .feature-text { padding: 40px 20px; }
-  section { padding: 60px 20px; }
-  .section-header h2 { font-size: 28px; }
+  section { padding: 60px 16px; }
+  .about-grid { grid-template-columns: 1fr; gap: 24px; }
+  .about-img { height: 300px; }
+  .values-strip { grid-template-columns: repeat(3, 1fr); }
+  .values-strip .v-item { padding: 20px 8px; }
+  .services-grid { grid-template-columns: 1fr; gap: 20px; }
+  .carousel-track img { height: 280px; }
+  .project-header { flex-direction: column; gap: 4px; }
+}
+@media (max-width: 480px) {
+  .values-strip { grid-template-columns: repeat(2, 1fr); }
+  .carousel-track img { height: 220px; }
+  .carousel-btn { width: 36px; height: 36px; font-size: 16px; }
 }
 </style>
 </head>
@@ -357,22 +366,22 @@ footer a { color: var(--rice); text-decoration: none; }
     <li><a href="#services">Services</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-  <div class="hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')">
+  <button class="hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Menu">
     <span></span><span></span><span></span>
-  </div>
+  </button>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-content">
+  <div>
     <h1>Building Restaurants<br>Worth Returning To</h1>
     <p>London's restaurant builders. Exceptional craftsmanship, delivered on time and on budget.</p>
-    <a href="#contact" class="hero-btn">Get In Touch</a>
+    <a href="#contact" class="btn">Get In Touch</a>
   </div>
 </section>
 
 <!-- ABOUT -->
-<section id="about" class="section-linen">
+<section id="about" class="bg-linen">
   <div class="about-grid">
     <div class="about-text">
       <h3>We Build Where People Gather</h3>
@@ -386,136 +395,149 @@ footer a { color: var(--rice); text-decoration: none; }
 </section>
 
 <!-- VALUES -->
-<section class="section-jungle" id="values">
-  <div class="section-header">
-    <h2>What We Stand For</h2>
-    <div class="line"></div>
-  </div>
-  <div class="values-grid">
-    <div class="value-card">
-      <h3>Relationships</h3>
+<section class="bg-jungle" style="padding: 0 24px;">
+  <div class="values-strip">
+    <div class="v-item">
+      <h4>Relationships</h4>
       <p>We listen first, then build.</p>
     </div>
-    <div class="value-card">
-      <h3>Precision</h3>
+    <div class="v-item">
+      <h4>Precision</h4>
       <p>Measured twice, done once.</p>
     </div>
-    <div class="value-card">
-      <h3>Craftsmanship</h3>
-      <p>Work we'd stake our name on.</p>
+    <div class="v-item">
+      <h4>Craftsmanship</h4>
+      <p>Work we stake our name on.</p>
     </div>
-    <div class="value-card">
-      <h3>Reliability</h3>
+    <div class="v-item">
+      <h4>Reliability</h4>
       <p>On time. On budget. Every time.</p>
     </div>
-    <div class="value-card">
-      <h3>Quality</h3>
-      <p>The best result your budget allows.</p>
+    <div class="v-item">
+      <h4>Quality</h4>
+      <p>The best your budget allows.</p>
     </div>
-    <div class="value-card">
-      <h3>Honesty</h3>
+    <div class="v-item">
+      <h4>Honesty</h4>
       <p>No hidden costs. No surprises.</p>
     </div>
   </div>
 </section>
 
 <!-- PORTFOLIO -->
-<section id="portfolio" class="section-white">
+<section id="portfolio" class="bg-white">
   <div class="section-header">
     <h2>Our Work</h2>
-    <p>A selection of restaurant builds and fit-outs across London</p>
+    <p>Selected restaurant builds and fit-outs across London</p>
     <div class="line"></div>
   </div>
-  <div class="portfolio-grid">
-    <div class="portfolio-item wide" onclick="openLightbox('images/img-000.jpg')">
-      <img src="images/img-000.jpg" alt="Restaurant interior" loading="lazy">
-    </div>
-    <div class="portfolio-item" onclick="openLightbox('images/img-003.jpg')">
-      <img src="images/img-003.jpg" alt="Restaurant dining area" loading="lazy">
-    </div>
-    <div class="portfolio-item" onclick="openLightbox('images/img-004.jpg')">
-      <img src="images/img-004.jpg" alt="Restaurant bar and seating" loading="lazy">
-    </div>
-    <div class="portfolio-item" onclick="openLightbox('images/img-005.jpg')">
-      <img src="images/img-005.jpg" alt="Private dining room" loading="lazy">
-    </div>
-    <div class="portfolio-item wide" onclick="openLightbox('images/img-010.jpg')">
-      <img src="images/img-010.jpg" alt="Bar and dining space" loading="lazy">
-    </div>
-    <div class="portfolio-item" onclick="openLightbox('images/img-001.jpg')">
-      <img src="images/img-001.jpg" alt="Restaurant interior" loading="lazy">
-    </div>
-    <div class="portfolio-item" onclick="openLightbox('images/img-006.jpg')">
-      <img src="images/img-006.jpg" alt="Restaurant detail" loading="lazy">
-    </div>
-    <div class="portfolio-item" onclick="openLightbox('images/img-007.jpg')">
-      <img src="images/img-007.jpg" alt="Restaurant build" loading="lazy">
-    </div>
-    <div class="portfolio-item" onclick="openLightbox('images/img-008.jpg')">
-      <img src="images/img-008.jpg" alt="Interior detail" loading="lazy">
-    </div>
-    <div class="portfolio-item" onclick="openLightbox('images/img-009.jpg')">
-      <img src="images/img-009.jpg" alt="Dining space" loading="lazy">
-    </div>
-    <div class="portfolio-item wide" onclick="openLightbox('images/img-012.jpg')">
-      <img src="images/img-012.jpg" alt="Cocktail bar" loading="lazy">
-    </div>
-    <div class="portfolio-item" onclick="openLightbox('images/img-011.jpg')">
-      <img src="images/img-011.jpg" alt="Restaurant detail" loading="lazy">
-    </div>
-    <div class="portfolio-item" onclick="openLightbox('images/img-013.jpg')">
-      <img src="images/img-013.jpg" alt="Restaurant feature" loading="lazy">
-    </div>
-    <div class="portfolio-item" onclick="openLightbox('images/img-014.jpg')">
-      <img src="images/img-014.jpg" alt="Restaurant interior" loading="lazy">
-    </div>
-    <div class="portfolio-item" onclick="openLightbox('images/img-015.jpg')">
-      <img src="images/img-015.jpg" alt="Build detail" loading="lazy">
-    </div>
-    <div class="portfolio-item" onclick="openLightbox('images/img-016.jpg')">
-      <img src="images/img-016.jpg" alt="Construction work" loading="lazy">
-    </div>
-    <div class="portfolio-item wide" onclick="openLightbox('images/img-017.jpg')">
-      <img src="images/img-017.jpg" alt="Restaurant feature" loading="lazy">
-    </div>
-    <div class="portfolio-item wide" onclick="openLightbox('images/img-018.jpg')">
-      <img src="images/img-018.jpg" alt="Outdoor venue setup" loading="lazy">
-    </div>
-    <div class="portfolio-item" onclick="openLightbox('images/img-019.jpg')">
-      <img src="images/img-019.jpg" alt="Venue construction" loading="lazy">
-    </div>
-    <div class="portfolio-item wide" onclick="openLightbox('images/img-020.jpg')">
-      <img src="images/img-020.jpg" alt="Tanqueray Terrace" loading="lazy">
-    </div>
-    <div class="portfolio-item" onclick="openLightbox('images/img-021.jpg')">
-      <img src="images/img-021.jpg" alt="Outdoor bar" loading="lazy">
-    </div>
-    <div class="portfolio-item" onclick="openLightbox('images/img-022.jpg')">
-      <img src="images/img-022.jpg" alt="Venue detail" loading="lazy">
-    </div>
-    <div class="portfolio-item wide" onclick="openLightbox('images/img-023.jpg')">
-      <img src="images/img-023.jpg" alt="Event space" loading="lazy">
-    </div>
-    <div class="portfolio-item" onclick="openLightbox('images/img-024.jpg')">
-      <img src="images/img-024.jpg" alt="Venue build" loading="lazy">
-    </div>
-  </div>
-</section>
+  <div class="projects">
 
-<!-- FEATURE: KUDU GRILL -->
-<section class="section-dark" style="padding:0">
-  <div class="feature-strip">
-    <img src="images/img-004.jpg" alt="Kudu Grill interior" class="feature-img">
-    <div class="feature-text">
-      <h3>Kudu Grill</h3>
-      <p>57 Nunhead Lane, London SE15 3TR</p>
-      <p>A complete restaurant build from the ground up — tables, mirrors, floors, kitchen, counters, electrics, plumbing, tiling, and painting. Every element crafted to create a warm, sophisticated space where guests feel at home from the moment they walk in.</p>
+    <!-- KUDU GRILL -->
+    <div class="project">
+      <div class="project-header">
+        <h3>Kudu Grill</h3>
+        <span>57 Nunhead Lane, London SE15</span>
+      </div>
+      <div class="carousel-wrap" data-carousel>
+        <div class="carousel-track">
+          <img src="images/img-000.jpg" alt="Kudu Grill — main dining room" loading="lazy" onclick="openLightbox(this.src)">
+          <img src="images/img-001.jpg" alt="Kudu Grill — bar and open kitchen" loading="lazy" onclick="openLightbox(this.src)">
+          <img src="images/img-002.jpg" alt="Kudu Grill — booth seating" loading="lazy" onclick="openLightbox(this.src)">
+          <img src="images/img-003.jpg" alt="Kudu Grill — intimate corner" loading="lazy" onclick="openLightbox(this.src)">
+          <img src="images/img-004.jpg" alt="Kudu Grill — full interior" loading="lazy" onclick="openLightbox(this.src)">
+        </div>
+        <button class="carousel-btn prev" onclick="slide(this,-1)">&#8249;</button>
+        <button class="carousel-btn next" onclick="slide(this,1)">&#8250;</button>
+        <div class="carousel-dots"></div>
+      </div>
     </div>
+
+    <!-- PRIVATE DINING / WINE BAR -->
+    <div class="project">
+      <div class="project-header">
+        <h3>Portuguese Wine Bar &amp; Private Dining</h3>
+        <span>London</span>
+      </div>
+      <div class="carousel-wrap" data-carousel>
+        <div class="carousel-track">
+          <img src="images/img-005.jpg" alt="Private dining room" loading="lazy" onclick="openLightbox(this.src)">
+          <img src="images/img-006.jpg" alt="Wine bar shelving and display" loading="lazy" onclick="openLightbox(this.src)">
+          <img src="images/img-007.jpg" alt="Dining area with wine storage" loading="lazy" onclick="openLightbox(this.src)">
+          <img src="images/img-008.jpg" alt="Wine cellar" loading="lazy" onclick="openLightbox(this.src)">
+        </div>
+        <button class="carousel-btn prev" onclick="slide(this,-1)">&#8249;</button>
+        <button class="carousel-btn next" onclick="slide(this,1)">&#8250;</button>
+        <div class="carousel-dots"></div>
+      </div>
+    </div>
+
+    <!-- BISTRO / BAR -->
+    <div class="project">
+      <div class="project-header">
+        <h3>Botanical Bistro &amp; Bar</h3>
+        <span>London</span>
+      </div>
+      <div class="carousel-wrap" data-carousel>
+        <div class="carousel-track">
+          <img src="images/img-009.jpg" alt="Bistro dining area" loading="lazy" onclick="openLightbox(this.src)">
+          <img src="images/img-010.jpg" alt="Bar and main floor" loading="lazy" onclick="openLightbox(this.src)">
+          <img src="images/img-011.jpg" alt="Restaurant detail" loading="lazy" onclick="openLightbox(this.src)">
+        </div>
+        <button class="carousel-btn prev" onclick="slide(this,-1)">&#8249;</button>
+        <button class="carousel-btn next" onclick="slide(this,1)">&#8250;</button>
+        <div class="carousel-dots"></div>
+      </div>
+    </div>
+
+    <!-- COCKTAIL BAR / LOUNGE -->
+    <div class="project">
+      <div class="project-header">
+        <h3>Cocktail Bar &amp; Lounge</h3>
+        <span>London</span>
+      </div>
+      <div class="carousel-wrap" data-carousel>
+        <div class="carousel-track">
+          <img src="images/img-012.jpg" alt="Copper-fronted cocktail bar" loading="lazy" onclick="openLightbox(this.src)">
+          <img src="images/img-013.jpg" alt="Speakeasy basement bar" loading="lazy" onclick="openLightbox(this.src)">
+          <img src="images/img-014.jpg" alt="Industrial bar interior" loading="lazy" onclick="openLightbox(this.src)">
+          <img src="images/img-015.jpg" alt="Lounge seating area" loading="lazy" onclick="openLightbox(this.src)">
+          <img src="images/img-016.jpg" alt="Bar overhead view" loading="lazy" onclick="openLightbox(this.src)">
+          <img src="images/img-017.jpg" alt="Intimate dining nook" loading="lazy" onclick="openLightbox(this.src)">
+        </div>
+        <button class="carousel-btn prev" onclick="slide(this,-1)">&#8249;</button>
+        <button class="carousel-btn next" onclick="slide(this,1)">&#8250;</button>
+        <div class="carousel-dots"></div>
+      </div>
+    </div>
+
+    <!-- TANQUERAY TERRACE -->
+    <div class="project">
+      <div class="project-header">
+        <h3>Tanqueray Terrace — Vinegar Yard</h3>
+        <span>London Bridge</span>
+      </div>
+      <div class="carousel-wrap" data-carousel>
+        <div class="carousel-track">
+          <img src="images/img-018.jpg" alt="Venue setup and construction" loading="lazy" onclick="openLightbox(this.src)">
+          <img src="images/img-019.jpg" alt="Beer garden build" loading="lazy" onclick="openLightbox(this.src)">
+          <img src="images/img-020.jpg" alt="Tanqueray Terrace complete" loading="lazy" onclick="openLightbox(this.src)">
+          <img src="images/img-021.jpg" alt="Terrace bar with floral wall" loading="lazy" onclick="openLightbox(this.src)">
+          <img src="images/img-022.jpg" alt="Bar counter detail" loading="lazy" onclick="openLightbox(this.src)">
+          <img src="images/img-023.jpg" alt="Back bar shelving" loading="lazy" onclick="openLightbox(this.src)">
+          <img src="images/img-024.jpg" alt="Finished outdoor bar" loading="lazy" onclick="openLightbox(this.src)">
+        </div>
+        <button class="carousel-btn prev" onclick="slide(this,-1)">&#8249;</button>
+        <button class="carousel-btn next" onclick="slide(this,1)">&#8250;</button>
+        <div class="carousel-dots"></div>
+      </div>
+    </div>
+
   </div>
 </section>
 
 <!-- SERVICES -->
-<section id="services" class="section-linen">
+<section id="services" class="bg-linen">
   <div class="section-header">
     <h2>What We Do</h2>
     <p>End-to-end construction and maintenance for restaurants</p>
@@ -551,19 +573,8 @@ footer a { color: var(--rice); text-decoration: none; }
   </div>
 </section>
 
-<!-- FEATURE 2 -->
-<section class="section-dark" style="padding:0">
-  <div class="feature-strip reverse">
-    <img src="images/img-020.jpg" alt="Tanqueray Terrace outdoor venue" class="feature-img">
-    <div class="feature-text">
-      <h3>Outdoor &amp; Pop-Up Venues</h3>
-      <p>Not every great dining experience happens indoors. From pop-up bars to branded terraces, we bring the same precision and craft to outdoor hospitality — built to impress, whatever the weather.</p>
-    </div>
-  </div>
-</section>
-
 <!-- CONTACT -->
-<section id="contact" class="section-white">
+<section id="contact" class="bg-white">
   <div class="section-header">
     <h2>Let's Talk</h2>
     <p>Whether you're opening your first restaurant or refreshing an established favourite, we'd love to hear from you.</p>
@@ -581,7 +592,7 @@ footer a { color: var(--rice); text-decoration: none; }
 <!-- FOOTER -->
 <footer>
   <p>&copy; 2026 SKHB Construction Ltd. All rights reserved.</p>
-  <p style="margin-top:8px"><a href="https://www.kuducollective.com/kudu-grill">Kudu Grill</a> · London, UK</p>
+  <p style="margin-top:6px">London, UK</p>
 </footer>
 
 <!-- LIGHTBOX -->
@@ -590,6 +601,49 @@ footer a { color: var(--rice); text-decoration: none; }
 </div>
 
 <script>
+// Carousel
+function initCarousels() {
+  document.querySelectorAll('[data-carousel]').forEach(wrap => {
+    const track = wrap.querySelector('.carousel-track');
+    const imgs = track.querySelectorAll('img');
+    const dotsContainer = wrap.querySelector('.carousel-dots');
+    let idx = 0;
+
+    // Create dots
+    imgs.forEach((_, i) => {
+      const dot = document.createElement('button');
+      dot.className = 'dot' + (i === 0 ? ' active' : '');
+      dot.onclick = (e) => { e.stopPropagation(); goTo(i); };
+      dotsContainer.appendChild(dot);
+    });
+
+    function goTo(i) {
+      idx = i;
+      if (idx < 0) idx = imgs.length - 1;
+      if (idx >= imgs.length) idx = 0;
+      track.style.transform = `translateX(-${idx * 100}%)`;
+      dotsContainer.querySelectorAll('.dot').forEach((d, j) => d.classList.toggle('active', j === idx));
+    }
+
+    wrap.goTo = goTo;
+    wrap.getIdx = () => idx;
+
+    // Touch/swipe support
+    let startX = 0;
+    track.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+    track.addEventListener('touchend', e => {
+      const diff = startX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 50) goTo(idx + (diff > 0 ? 1 : -1));
+    }, { passive: true });
+  });
+}
+
+function slide(btn, dir) {
+  const wrap = btn.closest('[data-carousel]');
+  wrap.goTo(wrap.getIdx() + dir);
+}
+
+// Lightbox
 function openLightbox(src) {
   document.getElementById('lightboxImg').src = src;
   document.getElementById('lightbox').classList.add('active');
@@ -599,7 +653,15 @@ function closeLightbox() {
   document.getElementById('lightbox').classList.remove('active');
   document.body.style.overflow = '';
 }
-document.addEventListener('keydown', e => { if(e.key === 'Escape') closeLightbox(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
+// Nav close on link click
+document.querySelectorAll('.nav-links a').forEach(a => {
+  a.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open'));
+});
+
+// Init
+initCarousels();
 </script>
 
 </body>
