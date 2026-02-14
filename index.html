@@ -271,6 +271,74 @@ section { padding: 80px 24px; }
 }
 .carousel-dots .dot.active { opacity: 1; }
 
+/* PROCESS */
+.process-steps {
+  max-width: 1060px; margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  position: relative;
+}
+.process-steps::before {
+  content: '';
+  position: absolute;
+  top: 36px;
+  left: 10%;
+  right: 10%;
+  height: 2px;
+  background: var(--rice);
+  z-index: 0;
+}
+.step {
+  text-align: center;
+  padding: 0 20px;
+  position: relative;
+  z-index: 1;
+}
+.step-num {
+  width: 72px; height: 72px;
+  border-radius: 50%;
+  background: var(--jungle);
+  color: var(--linen);
+  font-family: 'Fraunces', serif;
+  font-size: 28px;
+  font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 16px;
+  border: 3px solid var(--rice);
+}
+.step h4 {
+  font-family: 'Fraunces', serif;
+  font-size: 18px;
+  color: var(--jungle);
+  margin-bottom: 8px;
+}
+.step p {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* WHATSAPP */
+.whatsapp-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 150;
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  background: #25D366;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-decoration: none;
+}
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+.whatsapp-float svg { width: 30px; height: 30px; fill: #fff; }
+
 /* SERVICES */
 .services-grid {
   max-width: 1060px; margin: 0 auto;
@@ -412,12 +480,15 @@ footer a { color: var(--rice); text-decoration: none; }
   .about-img { height: 300px; }
   .values-strip { grid-template-columns: repeat(3, 1fr); }
   .values-strip .v-item { padding: 20px 8px; }
+  .process-steps { grid-template-columns: repeat(2, 1fr); gap: 30px; }
+  .process-steps::before { display: none; }
   .services-grid { grid-template-columns: 1fr; gap: 20px; }
   .carousel-track img { height: 280px; }
   .project-header { flex-direction: column; gap: 4px; }
 }
 @media (max-width: 480px) {
   .values-strip { grid-template-columns: repeat(2, 1fr); }
+  .process-steps { grid-template-columns: 1fr; gap: 24px; }
   .carousel-track img { height: 220px; }
   .carousel-btn { width: 36px; height: 36px; font-size: 16px; }
 }
@@ -605,11 +676,43 @@ footer a { color: var(--rice); text-decoration: none; }
   </div>
 </section>
 
+<!-- PROCESS -->
+<section class="bg-linen">
+  <div class="section-header">
+    <h2>How We Work</h2>
+    <p>From first conversation to final handover — a clear, simple process</p>
+    <div class="line"></div>
+  </div>
+  <div class="process-steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <h4>Consultation</h4>
+      <p>We meet, listen to your vision, assess the space, and understand your budget and timeline.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <h4>Planning</h4>
+      <p>We scope the work, price it transparently, and agree a detailed schedule before anything starts.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <h4>Build</h4>
+      <p>Our team delivers the full build — on site, on schedule, with regular updates throughout.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <h4>Handover</h4>
+      <p>Final walkthrough, snagging, and handover. Your space is ready for opening night.</p>
+    </div>
+  </div>
+</section>
+
 <!-- SERVICES -->
-<section id="services" class="bg-linen">
+<section id="services" class="bg-white">
   <div class="section-header">
     <h2>What We Do</h2>
     <p>End-to-end construction and maintenance for restaurants</p>
+
     <div class="line"></div>
   </div>
   <div class="services-grid">
@@ -680,6 +783,11 @@ footer a { color: var(--rice); text-decoration: none; }
 <footer>
   <p>&copy; 2026 SKHB Construction Ltd. All rights reserved.</p>
 </footer>
+
+<!-- WHATSAPP BUTTON -->
+<a href="https://wa.me/YOUR_NUMBER?text=Hi%20Sununu%2C%20I%20found%20SKHB%20online%20and%20I%27d%20like%20to%20discuss%20a%20project." class="whatsapp-float" aria-label="Chat on WhatsApp" target="_blank" rel="noopener">
+  <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16.004 0h-.008C7.174 0 0 7.176 0 16c0 3.5 1.128 6.744 3.046 9.378L1.054 31.29l6.118-1.958A15.9 15.9 0 0016.004 32C24.826 32 32 24.822 32 16S24.826 0 16.004 0zm9.312 22.594c-.39 1.1-1.932 2.012-3.182 2.278-.856.18-1.974.324-5.738-1.234-4.818-1.994-7.916-6.878-8.156-7.196-.23-.318-1.932-2.572-1.932-4.904s1.222-3.478 1.656-3.956c.434-.478.948-.598 1.264-.598.316 0 .632.002.908.016.292.016.682-.11 1.068.814.39.94 1.33 3.272 1.448 3.51.118.24.196.518.04.836-.16.318-.24.518-.478.796-.24.278-.504.622-.72.834-.24.24-.488.502-.21.984.278.478 1.238 2.042 2.658 3.31 1.826 1.632 3.366 2.138 3.844 2.376.478.24.756.2 1.034-.118.278-.318 1.194-1.392 1.512-1.87.318-.478.636-.398 1.074-.24.434.16 2.768 1.304 3.244 1.542.478.24.796.358.914.556.118.196.118 1.14-.272 2.24z"/></svg>
+</a>
 
 <!-- LIGHTBOX -->
 <div class="lightbox" id="lightbox" onclick="closeLightbox()">
