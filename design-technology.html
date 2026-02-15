@@ -577,14 +577,39 @@ footer {
     <p style="color:#aaa;font-size:14px;line-height:1.8;max-width:700px;margin-bottom:30px;">
       Our design process starts with 3D modelling in SketchUp or Rhino, then moves to final material rendering in Unreal Engine 5 — producing photorealistic visualisations that show clients exactly what the finished space will look like before construction begins.
     </p>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
+    <!-- Pair 1: Wireframe → Photorealistic (close-up) -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:30px;">
       <div>
-        <img src="images/design-living-sketchup.jpg" alt="SketchUp 3D model — initial design layout" loading="lazy" onclick="openLightbox(this.src)" style="width:100%;height:300px;object-fit:cover;cursor:pointer;">
-        <p style="color:var(--rice);font-size:12px;text-align:center;margin-top:10px;text-transform:uppercase;letter-spacing:1px;">SketchUp / Rhino — 3D Model</p>
+        <img src="images/pipeline-wireframe.jpg" alt="Wireframe 3D model — structural geometry view" loading="lazy" onclick="openLightbox(this.src)" style="width:100%;height:300px;object-fit:cover;cursor:pointer;">
+        <p style="color:var(--rice);font-size:12px;text-align:center;margin-top:10px;text-transform:uppercase;letter-spacing:1px;">Wireframe — 3D Geometry</p>
       </div>
       <div>
-        <img src="images/design-living-final.jpg" alt="Unreal Engine 5 photorealistic render — final visualisation" loading="lazy" onclick="openLightbox(this.src)" style="width:100%;height:300px;object-fit:cover;cursor:pointer;">
-        <p style="color:var(--rice);font-size:12px;text-align:center;margin-top:10px;text-transform:uppercase;letter-spacing:1px;">Unreal Engine 5 — Final Render</p>
+        <img src="images/pipeline-render-vase.jpg" alt="Photorealistic render — final materials and lighting" loading="lazy" onclick="openLightbox(this.src)" style="width:100%;height:300px;object-fit:cover;cursor:pointer;">
+        <p style="color:var(--rice);font-size:12px;text-align:center;margin-top:10px;text-transform:uppercase;letter-spacing:1px;">Final Render — Photorealistic</p>
+      </div>
+    </div>
+
+    <!-- Pair 2: Clay → Photorealistic (close-up) -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:30px;">
+      <div>
+        <img src="images/pipeline-clay-vase.jpg" alt="Clay render — form and lighting without materials" loading="lazy" onclick="openLightbox(this.src)" style="width:100%;height:300px;object-fit:cover;cursor:pointer;">
+        <p style="color:var(--rice);font-size:12px;text-align:center;margin-top:10px;text-transform:uppercase;letter-spacing:1px;">Clay Render — Form &amp; Light</p>
+      </div>
+      <div>
+        <img src="images/pipeline-render-vase.jpg" alt="Photorealistic render — final materials and lighting" loading="lazy" onclick="openLightbox(this.src)" style="width:100%;height:300px;object-fit:cover;cursor:pointer;">
+        <p style="color:var(--rice);font-size:12px;text-align:center;margin-top:10px;text-transform:uppercase;letter-spacing:1px;">Final Render — Photorealistic</p>
+      </div>
+    </div>
+
+    <!-- Pair 3: SketchUp → Photorealistic (living room) -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
+      <div>
+        <img src="images/pipeline-sketchup-lounge.jpg" alt="SketchUp 3D model — living room layout" loading="lazy" onclick="openLightbox(this.src)" style="width:100%;height:300px;object-fit:cover;cursor:pointer;">
+        <p style="color:var(--rice);font-size:12px;text-align:center;margin-top:10px;text-transform:uppercase;letter-spacing:1px;">SketchUp — 3D Model</p>
+      </div>
+      <div>
+        <img src="images/pipeline-render-lounge.jpg" alt="Photorealistic render — finished living room visualisation" loading="lazy" onclick="openLightbox(this.src)" style="width:100%;height:300px;object-fit:cover;cursor:pointer;">
+        <p style="color:var(--rice);font-size:12px;text-align:center;margin-top:10px;text-transform:uppercase;letter-spacing:1px;">Final Render — Photorealistic</p>
       </div>
     </div>
   </div>
