@@ -460,8 +460,6 @@ section { padding: 80px 24px; }
   padding-bottom: 20px;
 }
 
-/* COOKIE NOTICE */
-
 /* NAV ACTIVE */
 .nav-links a.active { color: var(--linen); }
 /* Clean layout */
@@ -795,3 +793,599 @@ footer {
   .process-steps { grid-template-columns: 1fr; gap: 24px; }
   .carousel-track img { height: 220px; }
   .carousel-btn { width: 36px; height: 36px; font-size: 16px; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">SKHB</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#about">About</a></li>
+    <li><a href="#portfolio">Portfolio</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="blog/">Blog</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div>
+    <h1>Building Restaurants<br>Worth Returning To</h1>
+    <p>London's restaurant builders. Exceptional craftsmanship, delivered on time and on budget.</p>
+    <a href="#contact" class="btn">Get In Touch</a>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="bg-linen">
+  <div class="about-grid">
+    <div class="about-text">
+      <h3>We Build Where People Gather</h3>
+      <p>SKHB Construction Ltd is a London-based construction company specialising in building and maintaining beautiful restaurant spaces. From complete builds to ongoing maintenance, we handle every detail under one roof.</p>
+      <p>From a complete kitchen fit-out to the final coat of paint, we manage everything ourselves — electrics, plumbing, tiling, joinery, the lot. No subcontractor roulette. One team, one standard.</p>
+      <p>Founded by Sununu, SKHB is built on strong client relationships and honest communication. We listen first, plan precisely, and deliver exceptional workmanship within your budget and timeline.</p>
+      <p class="highlight">We're not the biggest. We're the ones who get it right.</p>
+    </div>
+    <img src="images/img-002.jpg" alt="Elegant restaurant interior by SKHB" class="about-img">
+  </div>
+</section>
+
+<!-- VALUES -->
+<section class="bg-jungle" style="padding: 0 24px;">
+  <div class="values-strip">
+    <div class="v-item">
+      <h4>Relationships</h4>
+      <p>We listen first, then build.</p>
+    </div>
+    <div class="v-item">
+      <h4>Precision</h4>
+      <p>Measured twice, done once.</p>
+    </div>
+    <div class="v-item">
+      <h4>Craftsmanship</h4>
+      <p>Work we stake our name on.</p>
+    </div>
+    <div class="v-item">
+      <h4>Reliability</h4>
+      <p>On time. On budget. Every time.</p>
+    </div>
+    <div class="v-item">
+      <h4>Quality</h4>
+      <p>The best your budget allows.</p>
+    </div>
+    <div class="v-item">
+      <h4>Honesty</h4>
+      <p>No hidden costs. No surprises.</p>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="bg-jungle" style="padding: 0 24px;">
+  <div class="stats-strip">
+    <div class="stat">
+      <div class="stat-num" data-target="5">0</div>
+      <div class="stat-label">Restaurants Built</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num" data-target="100" data-suffix="%">0%</div>
+      <div class="stat-label">On Time &amp; On Budget</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num" data-target="100" data-suffix="%">0%</div>
+      <div class="stat-label">Repeat &amp; Referral Clients</div>
+    </div>
+  </div>
+</section>
+
+<!-- CLIENT LOGOS -->
+<section class="bg-linen" style="padding: 40px 24px;">
+  <div class="logos-strip">
+    <a href="https://www.kuducollective.com/kudu-grill" target="_blank" rel="noopener" class="logo-item">Kudu Grill</a>
+    <a href="https://lisboeta.co.uk/" target="_blank" rel="noopener" class="logo-item">Lisboeta</a>
+    <a href="https://casadofrango.co.uk/londonbridge" target="_blank" rel="noopener" class="logo-item">Casa do Frango</a>
+    <a href="https://www.revjwsimpson.com" target="_blank" rel="noopener" class="logo-item">Rev J W Simpson</a>
+    <a href="https://www.vinegaryard.london" target="_blank" rel="noopener" class="logo-item">Vinegar Yard</a>
+  </div>
+</section>
+
+<!-- FEATURED PROJECT -->
+<section class="bg-white">
+  <div class="section-header">
+    <h2>Featured Project</h2>
+    <div class="line"></div>
+  </div>
+  <div class="featured">
+    <img src="images/img-000.jpg" alt="Kudu Grill main dining room" class="featured-img blur-load">
+    <div class="featured-text">
+      <h3>Kudu Grill</h3>
+      <div class="location">57 Nunhead Ln, London SE15 3TR</div>
+      <p>A complete restaurant build for one of South London's most acclaimed dining spots. We delivered the full scope — from structural work through to the finishing touches that give Kudu Grill its warm, sophisticated atmosphere.</p>
+      <p>Every element was crafted to create a space where guests feel at home from the moment they walk in.</p>
+      <ul class="scope-list">
+        <li>Tables</li>
+        <li>Mirrors</li>
+        <li>Floors</li>
+        <li>Kitchen</li>
+        <li>Kitchen Counter</li>
+        <li>Painting</li>
+        <li>Electrics</li>
+        <li>Plumbing</li>
+        <li>Tiles</li>
+      </ul>
+      <a href="https://www.kuducollective.com/kudu-grill" target="_blank" rel="noopener" class="featured-link">Visit Kudu Grill →</a>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="portfolio" class="bg-white">
+  <div class="section-header">
+    <h2>Our Work</h2>
+    <p>Selected restaurant builds and fit-outs across London</p>
+    <div class="line"></div>
+  </div>
+  <div class="projects">
+
+    <!-- KUDU GRILL -->
+    <div class="project">
+      <div class="project-header">
+        <h3>Kudu Grill</h3>
+        <span>57 Nunhead Ln, London SE15 3TR</span>
+      </div>
+      <div class="carousel-wrap" data-carousel>
+        <div class="carousel-track">
+          <img src="images/img-000.jpg" alt="Kudu Grill — main dining room" loading="lazy" onclick="openLightbox(this.src)">
+          <img src="images/img-001.jpg" alt="Kudu Grill — bar and open kitchen" loading="lazy" onclick="openLightbox(this.src)">
+          <img src="images/img-002.jpg" alt="Kudu Grill — booth seating" loading="lazy" onclick="openLightbox(this.src)">
+          <img src="images/img-003.jpg" alt="Kudu Grill — intimate corner" loading="lazy" onclick="openLightbox(this.src)">
+          <img src="images/img-004.jpg" alt="Kudu Grill — full interior" loading="lazy" onclick="openLightbox(this.src)">
+        </div>
+        <button class="carousel-btn prev" onclick="slide(this,-1)">&#8249;</button>
+        <button class="carousel-btn next" onclick="slide(this,1)">&#8250;</button>
+        <div class="carousel-dots"></div>
+      </div>
+    </div>
+
+    <!-- LISBOETA -->
+    <div class="project">
+      <div class="project-header">
+        <h3>Lisboeta — Private Dining &amp; Cellar</h3>
+        <span>London</span>
+      </div>
+      <div class="carousel-wrap" data-carousel>
+        <div class="carousel-track">
+          <img src="images/img-005.jpg" alt="Private dining room" loading="lazy" onclick="openLightbox(this.src)">
+          <img src="images/img-006.jpg" alt="Wine bar shelving and display" loading="lazy" onclick="openLightbox(this.src)">
+          <img src="images/img-007.jpg" alt="Dining area with wine storage" loading="lazy" onclick="openLightbox(this.src)">
+          <img src="images/img-008.jpg" alt="Wine cellar" loading="lazy" onclick="openLightbox(this.src)">
+        </div>
+        <button class="carousel-btn prev" onclick="slide(this,-1)">&#8249;</button>
+        <button class="carousel-btn next" onclick="slide(this,1)">&#8250;</button>
+        <div class="carousel-dots"></div>
+      </div>
+    </div>
+
+    <!-- CASA DO FRANGO -->
+    <div class="project">
+      <div class="project-header">
+        <h3>Casa do Frango</h3>
+        <span>32 Southwark St, London SE1 1TU</span>
+      </div>
+      <div class="carousel-wrap" data-carousel>
+        <div class="carousel-track">
+          <img src="images/img-009.jpg" alt="Bistro dining area" loading="lazy" onclick="openLightbox(this.src)">
+          <img src="images/img-010.jpg" alt="Bar and main floor" loading="lazy" onclick="openLightbox(this.src)">
+          <img src="images/img-011.jpg" alt="Restaurant detail" loading="lazy" onclick="openLightbox(this.src)">
+        </div>
+        <button class="carousel-btn prev" onclick="slide(this,-1)">&#8249;</button>
+        <button class="carousel-btn next" onclick="slide(this,1)">&#8250;</button>
+        <div class="carousel-dots"></div>
+      </div>
+    </div>
+
+    <!-- REVEREND J W SIMPSON -->
+    <div class="project">
+      <div class="project-header">
+        <h3>Reverend J W Simpson</h3>
+        <span>32 Goodge St, London W1T 2QJ</span>
+      </div>
+      <div class="carousel-wrap" data-carousel>
+        <div class="carousel-track">
+          <img src="images/img-012.jpg" alt="Copper-fronted cocktail bar" loading="lazy" onclick="openLightbox(this.src)">
+          <img src="images/img-013.jpg" alt="Speakeasy basement bar" loading="lazy" onclick="openLightbox(this.src)">
+          <img src="images/img-014.jpg" alt="Industrial bar interior" loading="lazy" onclick="openLightbox(this.src)">
+          <img src="images/img-015.jpg" alt="Lounge seating area" loading="lazy" onclick="openLightbox(this.src)">
+          <img src="images/img-016.jpg" alt="Bar overhead view" loading="lazy" onclick="openLightbox(this.src)">
+          <img src="images/img-017.jpg" alt="Intimate dining nook" loading="lazy" onclick="openLightbox(this.src)">
+        </div>
+        <button class="carousel-btn prev" onclick="slide(this,-1)">&#8249;</button>
+        <button class="carousel-btn next" onclick="slide(this,1)">&#8250;</button>
+        <div class="carousel-dots"></div>
+      </div>
+    </div>
+
+    <!-- TANQUERAY ACTIVATION AT VINEGAR YARD -->
+    <div class="project">
+      <div class="project-header">
+        <h3>Tanqueray Activation — Vinegar Yard</h3>
+        <span>72-82 St Thomas St, London SE1 3QX</span>
+      </div>
+      <div class="carousel-wrap" data-carousel>
+        <div class="carousel-track">
+          <img src="images/img-025.jpg" alt="Tanqueray Terrace front view with floral wall" loading="lazy" onclick="openLightbox(this.src)">
+          <img src="images/img-020.jpg" alt="Tanqueray Terrace complete" loading="lazy" onclick="openLightbox(this.src)">
+          <img src="images/img-021.jpg" alt="Terrace bar with floral wall" loading="lazy" onclick="openLightbox(this.src)">
+          <img src="images/img-024.jpg" alt="Finished outdoor bar" loading="lazy" onclick="openLightbox(this.src)">
+          <img src="images/img-022.jpg" alt="Bar counter detail" loading="lazy" onclick="openLightbox(this.src)">
+          <img src="images/img-023.jpg" alt="Back bar shelving" loading="lazy" onclick="openLightbox(this.src)">
+          <img src="images/img-018.jpg" alt="Venue setup and construction" loading="lazy" onclick="openLightbox(this.src)">
+          <img src="images/img-019.jpg" alt="Beer garden build" loading="lazy" onclick="openLightbox(this.src)">
+        </div>
+        <button class="carousel-btn prev" onclick="slide(this,-1)">&#8249;</button>
+        <button class="carousel-btn next" onclick="slide(this,1)">&#8250;</button>
+        <div class="carousel-dots"></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="bg-linen">
+  <div class="section-header">
+    <h2>How We Work</h2>
+    <p>From first conversation to final handover — a clear, simple process</p>
+    <div class="line"></div>
+  </div>
+  <div class="process-steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <h4>Consultation</h4>
+      <p>We meet, listen to your vision, assess the space, and understand your budget and timeline.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <h4>Planning</h4>
+      <p>We scope the work, price it transparently, and agree a detailed schedule before anything starts.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <h4>Build</h4>
+      <p>Our team delivers the full build — on site, on schedule, with regular updates throughout.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <h4>Handover</h4>
+      <p>Final walkthrough, snagging, and handover. Your space is ready for opening night.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="bg-white">
+  <div class="section-header">
+    <h2>What We Do</h2>
+    <p>End-to-end construction and maintenance for restaurants</p>
+
+    <div class="line"></div>
+  </div>
+  <div class="services-grid">
+    <div class="service-card">
+      <h3>Full Restaurant Builds</h3>
+      <p>From empty shell to opening night — we manage the full journey. Structure, kitchen, electrics, plumbing, floors, walls, and every finishing touch that makes your guests say "wow."</p>
+    </div>
+    <div class="service-card">
+      <h3>Kitchen Fit-Outs</h3>
+      <p>Built for service, not just for show. We design and install kitchens that survive a Friday night rush — year after year.</p>
+    </div>
+    <div class="service-card">
+      <h3>Renovations &amp; Refurbishments</h3>
+      <p>Breathe new life into your space without losing a service more than you need to. We plan around your schedule and work fast without rushing.</p>
+    </div>
+    <div class="service-card">
+      <h3>Ongoing Maintenance</h3>
+      <p>A restaurant never stops needing attention. We keep yours looking sharp and running smoothly — so you can focus on your guests.</p>
+    </div>
+  </div>
+  <div class="specialist-tags">
+    <span class="specialist-tag">Tiling</span>
+    <span class="specialist-tag">Flooring</span>
+    <span class="specialist-tag">Electrics</span>
+    <span class="specialist-tag">Plumbing</span>
+    <span class="specialist-tag">Painting</span>
+    <span class="specialist-tag">Counters</span>
+    <span class="specialist-tag">Mirrors</span>
+    <span class="specialist-tag">Bespoke Joinery</span>
+    <span class="specialist-tag">Custom Furniture</span>
+    <span class="specialist-tag">Upholstery</span>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="bg-linen">
+  <div class="section-header">
+    <h2>Frequently Asked Questions</h2>
+    <div class="line"></div>
+  </div>
+  <div class="faq-list">
+    <div class="faq-item">
+      <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+        How long does a typical restaurant fit-out take?
+        <span class="faq-arrow">▾</span>
+      </button>
+      <div class="faq-answer">
+        It depends on the scope. A simple renovation might take 4–6 weeks, while a complete build from shell can take 8–16 weeks. We'll give you a realistic timeline during our initial consultation and keep you updated throughout.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+        Do you handle planning permission and building regulations?
+        <span class="faq-arrow">▾</span>
+      </button>
+      <div class="faq-answer">
+        We can advise on what permissions you'll need and work with your architects and planning consultants. For building regulations, we ensure all our work meets current standards and coordinate any required inspections.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+        What areas of London do you cover?
+        <span class="faq-arrow">▾</span>
+      </button>
+      <div class="faq-answer">
+        We work across all of London — from South London (where we built Kudu Grill) to Central (Lisboeta, Rev J W Simpson) and London Bridge (Casa do Frango, Vinegar Yard). If your project is in London, we'd love to hear about it.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+        Can you work while the restaurant is still open?
+        <span class="faq-arrow">▾</span>
+      </button>
+      <div class="faq-answer">
+        Yes — for renovations and maintenance, we often work around your service schedule. We plan carefully to minimise disruption and can work overnight or during off-hours when needed.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+        Do you provide a fixed quote?
+        <span class="faq-arrow">▾</span>
+      </button>
+      <div class="faq-answer">
+        Yes. After our initial consultation and site visit, we provide a detailed, transparent quote for the full scope of work. No hidden costs, no surprises. If anything changes during the build, we discuss it with you first.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+        What makes SKHB different from other construction companies?
+        <span class="faq-arrow">▾</span>
+      </button>
+      <div class="faq-answer">
+        We specialise exclusively in restaurants and hospitality spaces. We handle everything under one roof — electrics, plumbing, tiling, carpentry, painting — so you deal with one team, one quote, and one standard. No subcontractor roulette.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="bg-white">
+  <div class="section-header">
+    <h2>Let's Talk</h2>
+    <p>Whether you're opening your first restaurant or refreshing an established favourite, we'd love to hear from you.</p>
+    <div class="line"></div>
+  </div>
+  <div class="contact-content">
+    <p>Every great restaurant starts with a conversation. Tell us about your space, your vision, and your timeline — we'll take it from there.</p>
+    <form class="contact-form" action="https://formspree.io/f/mojndljj" method="POST">
+      <div>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required placeholder="Your name">
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required placeholder="your@email.com">
+      </div>
+      <div>
+        <label for="phone">Phone <span style="font-weight:400;text-transform:none">(optional)</span></label>
+        <input type="tel" id="phone" name="phone" placeholder="Your phone number">
+      </div>
+      <div>
+        <label for="message">Tell us about your project</label>
+        <textarea id="message" name="message" required placeholder="What are you looking to build or renovate? Any timeline or budget in mind?"></textarea>
+      </div>
+      <button type="submit">Send Message</button>
+    </form>
+    <p class="contact-alt">Or email us directly at <a href="mailto:info@skhbconstruction.co.uk">info@skhbconstruction.co.uk</a></p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <h3>SKHB</h3>
+      <p>Building restaurants worth returning to. London's specialist restaurant construction and fit-out company.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="blog/">Blog</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-contact">
+      <h4>Get In Touch</h4>
+      <p><a href="mailto:info@skhbconstruction.co.uk">info@skhbconstruction.co.uk</a></p>
+      <p><a href="https://wa.me/447791112982">WhatsApp</a></p>
+      <p style="margin-top:12px;color:var(--stone);font-style:italic">London, UK</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 SKHB Construction Ltd. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- BACK TO TOP -->
+<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
+
+<!-- WHATSAPP BUTTON -->
+<a href="https://wa.me/447791112982?text=Hi%20Sununu%2C%20I%20found%20SKHB%20online%20and%20I%27d%20like%20to%20discuss%20a%20project." class="whatsapp-float" aria-label="Chat on WhatsApp" target="_blank" rel="noopener">
+  <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16.004 0h-.008C7.174 0 0 7.176 0 16c0 3.5 1.128 6.744 3.046 9.378L1.054 31.29l6.118-1.958A15.9 15.9 0 0016.004 32C24.826 32 32 24.822 32 16S24.826 0 16.004 0zm9.312 22.594c-.39 1.1-1.932 2.012-3.182 2.278-.856.18-1.974.324-5.738-1.234-4.818-1.994-7.916-6.878-8.156-7.196-.23-.318-1.932-2.572-1.932-4.904s1.222-3.478 1.656-3.956c.434-.478.948-.598 1.264-.598.316 0 .632.002.908.016.292.016.682-.11 1.068.814.39.94 1.33 3.272 1.448 3.51.118.24.196.518.04.836-.16.318-.24.518-.478.796-.24.278-.504.622-.72.834-.24.24-.488.502-.21.984.278.478 1.238 2.042 2.658 3.31 1.826 1.632 3.366 2.138 3.844 2.376.478.24.756.2 1.034-.118.278-.318 1.194-1.392 1.512-1.87.318-.478.636-.398 1.074-.24.434.16 2.768 1.304 3.244 1.542.478.24.796.358.914.556.118.196.118 1.14-.272 2.24z"/></svg>
+</a>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <img id="lightboxImg" src="" alt="Portfolio image">
+</div>
+
+<script>
+// Carousel with autoplay
+function initCarousels() {
+  document.querySelectorAll('[data-carousel]').forEach(wrap => {
+    const track = wrap.querySelector('.carousel-track');
+    const imgs = track.querySelectorAll('img');
+    const dotsContainer = wrap.querySelector('.carousel-dots');
+    let idx = 0;
+    let autoTimer;
+
+    imgs.forEach((_, i) => {
+      const dot = document.createElement('button');
+      dot.className = 'dot' + (i === 0 ? ' active' : '');
+      dot.onclick = (e) => { e.stopPropagation(); goTo(i); resetAuto(); };
+      dotsContainer.appendChild(dot);
+    });
+
+    function goTo(i) {
+      idx = i;
+      if (idx < 0) idx = imgs.length - 1;
+      if (idx >= imgs.length) idx = 0;
+      track.style.transform = `translateX(-${idx * 100}%)`;
+      dotsContainer.querySelectorAll('.dot').forEach((d, j) => d.classList.toggle('active', j === idx));
+    }
+
+    function startAuto() { autoTimer = setInterval(() => goTo(idx + 1), 5000); }
+    function resetAuto() { clearInterval(autoTimer); startAuto(); }
+
+    wrap.goTo = goTo;
+    wrap.getIdx = () => idx;
+    wrap.resetAuto = resetAuto;
+
+    // Pause on hover
+    wrap.addEventListener('mouseenter', () => clearInterval(autoTimer));
+    wrap.addEventListener('mouseleave', () => startAuto());
+
+    // Touch/swipe
+    let startX = 0;
+    track.addEventListener('touchstart', e => { startX = e.touches[0].clientX; clearInterval(autoTimer); }, { passive: true });
+    track.addEventListener('touchend', e => {
+      const diff = startX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 50) goTo(idx + (diff > 0 ? 1 : -1));
+      startAuto();
+    }, { passive: true });
+
+    startAuto();
+  });
+}
+
+function slide(btn, dir) {
+  const wrap = btn.closest('[data-carousel]');
+  wrap.goTo(wrap.getIdx() + dir);
+  wrap.resetAuto();
+}
+
+// Animated counters
+function initCounters() {
+  const counters = document.querySelectorAll('.stat-num[data-target]');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        const target = parseInt(el.dataset.target);
+        const suffix = el.dataset.suffix || '';
+        let current = 0;
+        const step = Math.max(1, Math.floor(target / 40));
+        const timer = setInterval(() => {
+          current += step;
+          if (current >= target) { current = target; clearInterval(timer); }
+          el.textContent = current + suffix;
+        }, 40);
+        observer.unobserve(el);
+      }
+    });
+  }, { threshold: 0.5 });
+  counters.forEach(c => observer.observe(c));
+}
+
+// Nav highlight on scroll
+function initNavHighlight() {
+  const sections = document.querySelectorAll('section[id]');
+  const links = document.querySelectorAll('.nav-links a[href^="#"]');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => {
+      if (window.scrollY >= s.offsetTop - 100) current = s.id;
+    });
+    links.forEach(a => {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+    });
+  });
+}
+
+// Image blur load
+function initBlurLoad() {
+  document.querySelectorAll('.blur-load').forEach(img => {
+    if (img.complete) { img.classList.add('loaded'); return; }
+    img.addEventListener('load', () => img.classList.add('loaded'));
+  });
+  // Also handle carousel images
+  document.querySelectorAll('.carousel-track img').forEach(img => {
+    img.classList.add('blur-load');
+    if (img.complete) { img.classList.add('loaded'); return; }
+    img.addEventListener('load', () => img.classList.add('loaded'));
+  });
+}
+
+// Back to top
+function initBackToTop() {
+  const btn = document.getElementById('backToTop');
+  window.addEventListener('scroll', () => {
+    btn.classList.toggle('show', window.scrollY > 600);
+  });
+}
+
+// Lightbox
+function openLightbox(src) {
+  document.getElementById('lightboxImg').src = src;
+  document.getElementById('lightbox').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('active');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
+// Nav close on link click
+document.querySelectorAll('.nav-links a').forEach(a => {
+  a.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open'));
+});
+
+
+// Init everything
+initCarousels();
+initBlurLoad();
+initBackToTop();
+initCounters();
+initNavHighlight();
+</script>
+
+</body>
+</html>
