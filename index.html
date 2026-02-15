@@ -329,13 +329,10 @@ section { padding: 80px 24px; }
 /* SCROLL ANIMATIONS */
 .reveal {
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-  will-change: opacity, transform;
+  transition: opacity 0.6s ease;
 }
 .reveal.visible {
   opacity: 1;
-  transform: translateY(0);
 }
 /* Ensure no extra space from off-screen transforms */
 section { overflow: hidden; }
@@ -1134,6 +1131,11 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbo
 document.querySelectorAll('.nav-links a').forEach(a => {
   a.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open'));
 });
+
+// Fallback: force all reveals visible after 2s in case observer fails
+setTimeout(() => {
+  document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+}, 2000);
 
 // Init everything
 initCarousels();
