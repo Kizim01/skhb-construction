@@ -944,12 +944,12 @@ footer {
 
 <!-- CONTACT -->
 <section id="contact" class="bg-white">
-  <div class="section-header reveal">
+  <div class="section-header">
     <h2>Let's Talk</h2>
     <p>Whether you're opening your first restaurant or refreshing an established favourite, we'd love to hear from you.</p>
     <div class="line"></div>
   </div>
-  <div class="contact-content reveal">
+  <div class="contact-content">
     <p>Every great restaurant starts with a conversation. Tell us about your space, your vision, and your timeline — we'll take it from there.</p>
     <form class="contact-form" action="https://formspree.io/f/mojndljj" method="POST">
       <div>
@@ -1080,7 +1080,7 @@ function initReveal() {
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.15 });
+  }, { threshold: 0.05, rootMargin: '0px 0px 50px 0px' });
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 }
 
