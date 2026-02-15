@@ -501,6 +501,17 @@ footer { overflow: hidden; }
 }
 .back-to-top:hover { background: var(--jungle); }
 
+/* SCROLL REVEAL */
+.section-header, .service-card, .stat-item, .value-item, .process-step, .project-card, .blog-card, .comparison-table, .featured {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.revealed {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
 /* FEATURED PROJECT */
 .featured {
   max-width: 1100px;
@@ -1828,12 +1839,29 @@ document.querySelectorAll('.nav-links a').forEach(a => {
 });
 
 
+// Scroll reveal animations
+function initReveal() {
+  const reveals = document.querySelectorAll('.section-header, .service-card, .stat-item, .value-item, .process-step, .project-card, .blog-card, .comparison-table, .featured');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        // Stagger children slightly
+        entry.target.style.transitionDelay = (i % 4) * 0.1 + 's';
+        entry.target.classList.add('revealed');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+  reveals.forEach(el => observer.observe(el));
+}
+
 // Init everything
 initCarousels();
 initBlurLoad();
 initBackToTop();
 initCounters();
 initNavHighlight();
+initReveal();
 </script>
 
 </body>

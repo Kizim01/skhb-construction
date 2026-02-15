@@ -349,6 +349,7 @@ footer {
   nav { padding: 14px 20px; }
   .nav-links { display: none; }
   .hamburger { display: flex; }
+  .video-grid { grid-template-columns: 1fr !important; }
   .nav-links.open {
     display: flex; flex-direction: column;
     position: absolute; top: 56px; right: 16px;
@@ -484,6 +485,26 @@ footer {
     <img src="images/lidar-004.jpg" alt="LiDAR scan of outdoor venue with structure" loading="lazy" onclick="openLightbox(this.src)">
     <img src="images/lidar-011.jpg" alt="LiDAR point cloud — bar counter detail scan" loading="lazy" onclick="openLightbox(this.src)">
     <img src="images/lidar-012.jpg" alt="LiDAR point cloud — full floor plan aerial view with measurements" loading="lazy" onclick="openLightbox(this.src)">
+  </div>
+</section>
+
+<!-- VIDEO SHOWCASE -->
+<section class="bg-dark">
+  <div class="section-header">
+    <h2>Video Walkthroughs</h2>
+    <p>Fly through our 3D designs before a single brick is laid</p>
+    <div class="line"></div>
+  </div>
+  <div style="max-width:1100px;margin:0 auto;padding:0 30px;">
+    <div class="video-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:24px;">
+      <div style="position:relative;background:#111;border-radius:4px;overflow:hidden;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;">
+        <video src="videos/walkthrough-01.mp4" poster="images/pipeline-render-lounge.jpg" controls playsinline preload="none" style="width:100%;height:100%;object-fit:cover;"></video>
+      </div>
+      <div style="position:relative;background:#111;border-radius:4px;overflow:hidden;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;">
+        <video src="videos/walkthrough-02.mp4" poster="images/pipeline-render-vase.jpg" controls playsinline preload="none" style="width:100%;height:100%;object-fit:cover;"></video>
+      </div>
+    </div>
+    <p style="color:#666;font-size:12px;text-align:center;margin-top:16px;font-style:italic;">3D walkthrough animations rendered from our SketchUp models</p>
   </div>
 </section>
 
