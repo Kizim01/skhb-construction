@@ -10,8 +10,13 @@
 <meta property="og:description" content="London restaurant builders. Full builds, kitchen fit-outs, renovations and maintenance. Exceptional craftsmanship, delivered on time and on budget.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://kizim01.github.io/skhb-construction/">
+<meta property="og:image" content="https://kizim01.github.io/skhb-construction/og-image.jpg">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://kizim01.github.io/skhb-construction/og-image.jpg">
 <link rel="canonical" href="https://kizim01.github.io/skhb-construction/">
+<link rel="icon" type="image/png" href="favicon-32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="favicon.png" sizes="64x64">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -319,6 +324,118 @@ section { padding: 80px 24px; }
   line-height: 1.5;
 }
 
+/* SCROLL ANIMATIONS */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* IMAGE BLUR LOAD */
+.blur-load {
+  filter: blur(10px);
+  transition: filter 0.5s ease;
+}
+.blur-load.loaded {
+  filter: blur(0);
+}
+
+/* BACK TO TOP */
+.back-to-top {
+  position: fixed;
+  bottom: 90px;
+  right: 24px;
+  z-index: 150;
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  background: var(--volcanic);
+  color: var(--linen);
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  transition: background 0.3s, opacity 0.3s;
+  opacity: 0;
+}
+.back-to-top.show {
+  display: flex;
+  opacity: 1;
+}
+.back-to-top:hover { background: var(--jungle); }
+
+/* FEATURED PROJECT */
+.featured {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  overflow: hidden;
+  border-radius: 6px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+.featured-img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  min-height: 400px;
+}
+.featured-text {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--volcanic);
+  color: var(--linen);
+}
+.featured-text h3 {
+  font-family: 'Fraunces', serif;
+  font-size: 28px;
+  margin-bottom: 6px;
+}
+.featured-text .location {
+  font-size: 14px;
+  color: var(--rice);
+  font-style: italic;
+  margin-bottom: 20px;
+}
+.featured-text p {
+  font-size: 14px;
+  color: rgba(255,255,255,0.75);
+  margin-bottom: 14px;
+}
+.featured-text .scope-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+.featured-text .scope-list li {
+  padding: 4px 14px;
+  border: 1px solid rgba(139,168,136,0.4);
+  border-radius: 20px;
+  font-size: 12px;
+  color: var(--rice);
+}
+.featured-link {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 13px;
+  color: var(--rice);
+  text-decoration: none;
+  font-family: 'Fraunces', serif;
+  letter-spacing: 0.5px;
+  transition: color 0.3s;
+}
+.featured-link:hover { color: var(--linen); }
+
 /* WHATSAPP */
 .whatsapp-float {
   position: fixed;
@@ -437,11 +554,56 @@ section { padding: 80px 24px; }
 footer {
   background: var(--volcanic);
   color: var(--stone);
-  text-align: center;
-  padding: 32px;
+  padding: 60px 24px 32px;
   font-size: 13px;
 }
-footer a { color: var(--rice); text-decoration: none; }
+.footer-grid {
+  max-width: 1060px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+.footer-brand h3 {
+  font-family: 'Fraunces', serif;
+  font-size: 20px;
+  color: var(--linen);
+  margin-bottom: 10px;
+}
+.footer-brand p {
+  font-size: 13px;
+  color: var(--stone);
+  line-height: 1.6;
+  max-width: 300px;
+}
+.footer-links h4, .footer-contact h4 {
+  font-family: 'Fraunces', serif;
+  font-size: 14px;
+  color: var(--linen);
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.footer-links ul { list-style: none; }
+.footer-links li { margin-bottom: 8px; }
+.footer-links a, .footer-contact a {
+  color: var(--stone);
+  text-decoration: none;
+  transition: color 0.3s;
+  font-size: 13px;
+}
+.footer-links a:hover, .footer-contact a:hover { color: var(--rice); }
+.footer-contact p { margin-bottom: 8px; font-size: 13px; }
+.footer-bottom {
+  border-top: 1px solid rgba(168,146,121,0.2);
+  padding-top: 24px;
+  text-align: center;
+  font-size: 12px;
+}
+@media (max-width: 768px) {
+  .footer-grid { grid-template-columns: 1fr; gap: 24px; }
+}
 
 /* LIGHTBOX */
 .lightbox {
@@ -485,6 +647,9 @@ footer a { color: var(--rice); text-decoration: none; }
   .services-grid { grid-template-columns: 1fr; gap: 20px; }
   .carousel-track img { height: 280px; }
   .project-header { flex-direction: column; gap: 4px; }
+  .featured { grid-template-columns: 1fr; }
+  .featured-img { min-height: 250px; }
+  .featured-text { padding: 30px; }
 }
 @media (max-width: 480px) {
   .values-strip { grid-template-columns: repeat(2, 1fr); }
@@ -522,7 +687,7 @@ footer a { color: var(--rice); text-decoration: none; }
 
 <!-- ABOUT -->
 <section id="about" class="bg-linen">
-  <div class="about-grid">
+  <div class="about-grid reveal">
     <div class="about-text">
       <h3>We Build Where People Gather</h3>
       <p>SKHB Construction Ltd is a London-based construction company specialising in building and maintaining beautiful restaurant spaces. From complete builds to ongoing maintenance, we handle every detail under one roof.</p>
@@ -536,7 +701,7 @@ footer a { color: var(--rice); text-decoration: none; }
 
 <!-- VALUES -->
 <section class="bg-jungle" style="padding: 0 24px;">
-  <div class="values-strip">
+  <div class="values-strip reveal">
     <div class="v-item">
       <h4>Relationships</h4>
       <p>We listen first, then build.</p>
@@ -564,9 +729,38 @@ footer a { color: var(--rice); text-decoration: none; }
   </div>
 </section>
 
+<!-- FEATURED PROJECT -->
+<section class="bg-white">
+  <div class="section-header reveal">
+    <h2>Featured Project</h2>
+    <div class="line"></div>
+  </div>
+  <div class="featured reveal">
+    <img src="images/img-000.jpg" alt="Kudu Grill main dining room" class="featured-img blur-load">
+    <div class="featured-text">
+      <h3>Kudu Grill</h3>
+      <div class="location">57 Nunhead Ln, London SE15 3TR</div>
+      <p>A complete restaurant build for one of South London's most acclaimed dining spots. We delivered the full scope — from structural work through to the finishing touches that give Kudu Grill its warm, sophisticated atmosphere.</p>
+      <p>Every element was crafted to create a space where guests feel at home from the moment they walk in.</p>
+      <ul class="scope-list">
+        <li>Tables</li>
+        <li>Mirrors</li>
+        <li>Floors</li>
+        <li>Kitchen</li>
+        <li>Kitchen Counter</li>
+        <li>Painting</li>
+        <li>Electrics</li>
+        <li>Plumbing</li>
+        <li>Tiles</li>
+      </ul>
+      <a href="https://www.kuducollective.com/kudu-grill" target="_blank" rel="noopener" class="featured-link">Visit Kudu Grill →</a>
+    </div>
+  </div>
+</section>
+
 <!-- PORTFOLIO -->
 <section id="portfolio" class="bg-white">
-  <div class="section-header">
+  <div class="section-header reveal">
     <h2>Our Work</h2>
     <p>Selected restaurant builds and fit-outs across London</p>
     <div class="line"></div>
@@ -679,12 +873,12 @@ footer a { color: var(--rice); text-decoration: none; }
 
 <!-- PROCESS -->
 <section class="bg-linen">
-  <div class="section-header">
+  <div class="section-header reveal">
     <h2>How We Work</h2>
     <p>From first conversation to final handover — a clear, simple process</p>
     <div class="line"></div>
   </div>
-  <div class="process-steps">
+  <div class="process-steps reveal">
     <div class="step">
       <div class="step-num">1</div>
       <h4>Consultation</h4>
@@ -710,13 +904,13 @@ footer a { color: var(--rice); text-decoration: none; }
 
 <!-- SERVICES -->
 <section id="services" class="bg-white">
-  <div class="section-header">
+  <div class="section-header reveal">
     <h2>What We Do</h2>
     <p>End-to-end construction and maintenance for restaurants</p>
 
     <div class="line"></div>
   </div>
-  <div class="services-grid">
+  <div class="services-grid reveal">
     <div class="service-card">
       <h3>Full Restaurant Builds</h3>
       <p>From empty shell to opening night — we manage the full journey. Structure, kitchen, electrics, plumbing, floors, walls, and every finishing touch that makes your guests say "wow."</p>
@@ -750,12 +944,12 @@ footer a { color: var(--rice); text-decoration: none; }
 
 <!-- CONTACT -->
 <section id="contact" class="bg-white">
-  <div class="section-header">
+  <div class="section-header reveal">
     <h2>Let's Talk</h2>
     <p>Whether you're opening your first restaurant or refreshing an established favourite, we'd love to hear from you.</p>
     <div class="line"></div>
   </div>
-  <div class="contact-content">
+  <div class="contact-content reveal">
     <p>Every great restaurant starts with a conversation. Tell us about your space, your vision, and your timeline — we'll take it from there.</p>
     <form class="contact-form" action="https://formspree.io/f/mojndljj" method="POST">
       <div>
@@ -782,8 +976,35 @@ footer a { color: var(--rice); text-decoration: none; }
 
 <!-- FOOTER -->
 <footer>
-  <p>&copy; 2026 SKHB Construction Ltd. All rights reserved.</p>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <h3>SKHB</h3>
+      <p>Building restaurants worth returning to. London's specialist restaurant construction and fit-out company.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="blog/">Blog</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-contact">
+      <h4>Get In Touch</h4>
+      <p><a href="mailto:info@skhbconstruction.co.uk">info@skhbconstruction.co.uk</a></p>
+      <p><a href="https://wa.me/447791112982">WhatsApp</a></p>
+      <p style="margin-top:12px;color:var(--stone);font-style:italic">London, UK</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 SKHB Construction Ltd. All rights reserved.</p>
+  </div>
 </footer>
+
+<!-- BACK TO TOP -->
+<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
 
 <!-- WHATSAPP BUTTON -->
 <a href="https://wa.me/447791112982?text=Hi%20Sununu%2C%20I%20found%20SKHB%20online%20and%20I%27d%20like%20to%20discuss%20a%20project." class="whatsapp-float" aria-label="Chat on WhatsApp" target="_blank" rel="noopener">
@@ -796,19 +1017,19 @@ footer a { color: var(--rice); text-decoration: none; }
 </div>
 
 <script>
-// Carousel
+// Carousel with autoplay
 function initCarousels() {
   document.querySelectorAll('[data-carousel]').forEach(wrap => {
     const track = wrap.querySelector('.carousel-track');
     const imgs = track.querySelectorAll('img');
     const dotsContainer = wrap.querySelector('.carousel-dots');
     let idx = 0;
+    let autoTimer;
 
-    // Create dots
     imgs.forEach((_, i) => {
       const dot = document.createElement('button');
       dot.className = 'dot' + (i === 0 ? ' active' : '');
-      dot.onclick = (e) => { e.stopPropagation(); goTo(i); };
+      dot.onclick = (e) => { e.stopPropagation(); goTo(i); resetAuto(); };
       dotsContainer.appendChild(dot);
     });
 
@@ -820,22 +1041,69 @@ function initCarousels() {
       dotsContainer.querySelectorAll('.dot').forEach((d, j) => d.classList.toggle('active', j === idx));
     }
 
+    function startAuto() { autoTimer = setInterval(() => goTo(idx + 1), 5000); }
+    function resetAuto() { clearInterval(autoTimer); startAuto(); }
+
     wrap.goTo = goTo;
     wrap.getIdx = () => idx;
+    wrap.resetAuto = resetAuto;
 
-    // Touch/swipe support
+    // Pause on hover
+    wrap.addEventListener('mouseenter', () => clearInterval(autoTimer));
+    wrap.addEventListener('mouseleave', () => startAuto());
+
+    // Touch/swipe
     let startX = 0;
-    track.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+    track.addEventListener('touchstart', e => { startX = e.touches[0].clientX; clearInterval(autoTimer); }, { passive: true });
     track.addEventListener('touchend', e => {
       const diff = startX - e.changedTouches[0].clientX;
       if (Math.abs(diff) > 50) goTo(idx + (diff > 0 ? 1 : -1));
+      startAuto();
     }, { passive: true });
+
+    startAuto();
   });
 }
 
 function slide(btn, dir) {
   const wrap = btn.closest('[data-carousel]');
   wrap.goTo(wrap.getIdx() + dir);
+  wrap.resetAuto();
+}
+
+// Scroll animations
+function initReveal() {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+}
+
+// Image blur load
+function initBlurLoad() {
+  document.querySelectorAll('.blur-load').forEach(img => {
+    if (img.complete) { img.classList.add('loaded'); return; }
+    img.addEventListener('load', () => img.classList.add('loaded'));
+  });
+  // Also handle carousel images
+  document.querySelectorAll('.carousel-track img').forEach(img => {
+    img.classList.add('blur-load');
+    if (img.complete) { img.classList.add('loaded'); return; }
+    img.addEventListener('load', () => img.classList.add('loaded'));
+  });
+}
+
+// Back to top
+function initBackToTop() {
+  const btn = document.getElementById('backToTop');
+  window.addEventListener('scroll', () => {
+    btn.classList.toggle('show', window.scrollY > 600);
+  });
 }
 
 // Lightbox
@@ -855,8 +1123,11 @@ document.querySelectorAll('.nav-links a').forEach(a => {
   a.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open'));
 });
 
-// Init
+// Init everything
 initCarousels();
+initReveal();
+initBlurLoad();
+initBackToTop();
 </script>
 
 </body>
