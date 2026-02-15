@@ -290,13 +290,15 @@ section { padding: 80px 24px; }
   margin-top: 12px;
 }
 .carousel-dots .dot {
-  width: 8px; height: 8px;
+  width: 10px; height: 10px;
   border-radius: 50%;
   background: var(--rice);
   opacity: 0.35;
   cursor: pointer;
   transition: opacity 0.3s;
   border: none;
+  padding: 16px;
+  background-clip: content-box;
 }
 .carousel-dots .dot.active { opacity: 1; }
 
@@ -820,7 +822,7 @@ footer {
   .values-strip { grid-template-columns: repeat(2, 1fr); }
   .process-steps { grid-template-columns: 1fr; gap: 24px; }
   .carousel-track img { height: 220px; }
-  .carousel-btn { width: 36px; height: 36px; font-size: 16px; }
+  .carousel-btn { width: 44px; height: 44px; font-size: 18px; }
 }
 
 /* STATS BAR */
@@ -1260,8 +1262,8 @@ footer {
           <img src="images/img-003.jpg" alt="Kudu Grill — intimate corner" loading="lazy" onclick="openLightbox(this.src)">
           <img src="images/img-004.jpg" alt="Kudu Grill — full interior" loading="lazy" onclick="openLightbox(this.src)">
         </div>
-        <button class="carousel-btn prev" onclick="slide(this,-1)">&#8249;</button>
-        <button class="carousel-btn next" onclick="slide(this,1)">&#8250;</button>
+        <button class="carousel-btn prev" onclick="slide(this,-1)" aria-label="Previous slide">&#8249;</button>
+        <button class="carousel-btn next" onclick="slide(this,1)" aria-label="Next slide">&#8250;</button>
         <div class="carousel-dots"></div>
       </div>
       <a href="projects/kudu-grill.html" class="case-study-link">View Full Case Study &rarr;</a>
@@ -1283,8 +1285,8 @@ footer {
           <img src="images/img-032.jpg" alt="Little Kudu seating and mirrors" loading="lazy" onclick="openLightbox(this.src)">
           <img src="images/img-031.jpg" alt="Little Kudu outdoor terrace with custom planters" loading="lazy" onclick="openLightbox(this.src)">
         </div>
-        <button class="carousel-btn prev" onclick="slide(this,-1)">&#8249;</button>
-        <button class="carousel-btn next" onclick="slide(this,1)">&#8250;</button>
+        <button class="carousel-btn prev" onclick="slide(this,-1)" aria-label="Previous slide">&#8249;</button>
+        <button class="carousel-btn next" onclick="slide(this,1)" aria-label="Next slide">&#8250;</button>
         <div class="carousel-dots"></div>
       </div>
       <a href="projects/little-kudu.html" class="case-study-link">View Full Case Study &rarr;</a>
@@ -1303,8 +1305,8 @@ footer {
           <img src="images/img-007.jpg" alt="Dining area with wine storage" loading="lazy" onclick="openLightbox(this.src)">
           <img src="images/img-008.jpg" alt="Wine cellar" loading="lazy" onclick="openLightbox(this.src)">
         </div>
-        <button class="carousel-btn prev" onclick="slide(this,-1)">&#8249;</button>
-        <button class="carousel-btn next" onclick="slide(this,1)">&#8250;</button>
+        <button class="carousel-btn prev" onclick="slide(this,-1)" aria-label="Previous slide">&#8249;</button>
+        <button class="carousel-btn next" onclick="slide(this,1)" aria-label="Next slide">&#8250;</button>
         <div class="carousel-dots"></div>
       </div>
       <a href="projects/lisboeta.html" class="case-study-link">View Full Case Study &rarr;</a>
@@ -1322,8 +1324,8 @@ footer {
           <img src="images/img-010.jpg" alt="Bar and main floor" loading="lazy" onclick="openLightbox(this.src)">
           <img src="images/img-011.jpg" alt="Restaurant detail" loading="lazy" onclick="openLightbox(this.src)">
         </div>
-        <button class="carousel-btn prev" onclick="slide(this,-1)">&#8249;</button>
-        <button class="carousel-btn next" onclick="slide(this,1)">&#8250;</button>
+        <button class="carousel-btn prev" onclick="slide(this,-1)" aria-label="Previous slide">&#8249;</button>
+        <button class="carousel-btn next" onclick="slide(this,1)" aria-label="Next slide">&#8250;</button>
         <div class="carousel-dots"></div>
       </div>
       <a href="projects/casa-do-frango.html" class="case-study-link">View Full Case Study &rarr;</a>
@@ -1344,8 +1346,8 @@ footer {
           <img src="images/img-016.jpg" alt="Bar overhead view" loading="lazy" onclick="openLightbox(this.src)">
           <img src="images/img-017.jpg" alt="Intimate dining nook" loading="lazy" onclick="openLightbox(this.src)">
         </div>
-        <button class="carousel-btn prev" onclick="slide(this,-1)">&#8249;</button>
-        <button class="carousel-btn next" onclick="slide(this,1)">&#8250;</button>
+        <button class="carousel-btn prev" onclick="slide(this,-1)" aria-label="Previous slide">&#8249;</button>
+        <button class="carousel-btn next" onclick="slide(this,1)" aria-label="Next slide">&#8250;</button>
         <div class="carousel-dots"></div>
       </div>
       <a href="projects/reverend-jw-simpson.html" class="case-study-link">View Full Case Study &rarr;</a>
@@ -1366,8 +1368,8 @@ footer {
           <img src="images/img-035.jpg" alt="Fonda seating area with terracotta tiles" loading="lazy" onclick="openLightbox(this.src)">
           <img src="images/img-037.jpg" alt="Fonda dining floor with custom tables" loading="lazy" onclick="openLightbox(this.src)">
         </div>
-        <button class="carousel-btn prev" onclick="slide(this,-1)">&#8249;</button>
-        <button class="carousel-btn next" onclick="slide(this,1)">&#8250;</button>
+        <button class="carousel-btn prev" onclick="slide(this,-1)" aria-label="Previous slide">&#8249;</button>
+        <button class="carousel-btn next" onclick="slide(this,1)" aria-label="Next slide">&#8250;</button>
         <div class="carousel-dots"></div>
       </div>
       <a href="projects/fonda.html" class="case-study-link">View Full Case Study &rarr;</a>
@@ -1390,8 +1392,8 @@ footer {
           <img src="images/img-018.jpg" alt="Venue setup and construction" loading="lazy" onclick="openLightbox(this.src)">
           <img src="images/img-019.jpg" alt="Beer garden build" loading="lazy" onclick="openLightbox(this.src)">
         </div>
-        <button class="carousel-btn prev" onclick="slide(this,-1)">&#8249;</button>
-        <button class="carousel-btn next" onclick="slide(this,1)">&#8250;</button>
+        <button class="carousel-btn prev" onclick="slide(this,-1)" aria-label="Previous slide">&#8249;</button>
+        <button class="carousel-btn next" onclick="slide(this,1)" aria-label="Next slide">&#8250;</button>
         <div class="carousel-dots"></div>
       </div>
       <a href="projects/tanqueray-vinegar-yard.html" class="case-study-link">View Full Case Study &rarr;</a>
@@ -1697,6 +1699,7 @@ function initCarousels() {
     imgs.forEach((_, i) => {
       const dot = document.createElement('button');
       dot.className = 'dot' + (i === 0 ? ' active' : '');
+      dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
       dot.onclick = (e) => { e.stopPropagation(); goTo(i); resetAuto(); };
       dotsContainer.appendChild(dot);
     });
