@@ -987,7 +987,11 @@ footer {
   .comparison-col { padding: 30px 24px; }
 }
 
-/* TESTIMONIALS */
+/* TESTIMONIALS — photo overlay */
+.testimonials-section {
+  background: linear-gradient(rgba(30,30,30,0.82), rgba(30,30,30,0.88)), url('images/img-003.jpg') center/cover no-repeat fixed;
+  padding: 80px 24px;
+}
 .testimonials-grid {
   max-width: 1060px;
   margin: 0 auto;
@@ -995,6 +999,7 @@ footer {
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
 }
+.testimonials-section .section-header h2 { color: var(--linen); }
 .testimonial-card {
   background: #fff;
   padding: 36px 30px 30px;
@@ -1096,7 +1101,7 @@ footer {
       <h3>We Build Where People Gather</h3>
       <p>SKHB Construction Ltd is a London-based construction company specialising in building and maintaining beautiful restaurant spaces. From complete builds to ongoing maintenance, we handle every detail under one roof.</p>
       <p>From a complete kitchen fit-out to the final coat of paint, we manage everything ourselves: electrics, plumbing, tiling, joinery, the lot. No subcontractor roulette. One team, one standard.</p>
-      <p>Founded by Sununu, SKHB Construction is a hands-on team of specialists who have spent years learning what makes hospitality spaces work. Every member of our crew understands the unique demands of restaurant environments, from gas-safe kitchens to front-of-house finishes that need to survive thousands of covers.</p>
+      <p>Founded by construction director Sununu, SKHB Construction is a hands-on team of specialists who have spent years learning what makes hospitality spaces work. Every member of our crew understands the unique demands of restaurant environments, from gas-safe kitchens to front-of-house finishes that need to survive thousands of covers.</p>
       <p>We listen first, plan precisely, and deliver exceptional workmanship within your budget and timeline. Our goal is simple: get you open and trading as quickly as possible, without cutting a single corner.</p>
       <p class="highlight">We're not the biggest. We're the ones who get it right.</p>
       <a href="SKHB-Company-Profile.pdf" class="btn-secondary" target="_blank" rel="noopener">Download Our Company Profile</a>
@@ -1199,6 +1204,32 @@ footer {
         <div style="margin-top:6px;font-family:'Libre Baskerville',serif;font-size:13px;opacity:0.85;">LiDAR &bull; SketchUp &bull; V-Ray</div>
         <div style="margin-top:8px;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;opacity:0.7;">Explore Our Technology &rarr;</div>
       </a>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<!-- NOTE: These testimonials are PLACEHOLDERS. Replace with real quotes from clients. -->
+<section class="testimonials-section">
+  <div class="section-header">
+    <h2>What Our Clients Say</h2>
+    <div class="line"></div>
+  </div>
+  <div class="testimonials-grid">
+    <div class="testimonial-card">
+      <blockquote>From the first site visit to handing over the keys, Sununu and his team were exceptional. They understood exactly what we needed and delivered a space that exceeded our expectations. The attention to detail is remarkable.</blockquote>
+      <div class="testimonial-author">James T.</div>
+      <div class="testimonial-role">Restaurant Owner, Kudu Grill</div>
+    </div>
+    <div class="testimonial-card">
+      <blockquote>We needed a team who could work to a tight deadline without cutting corners. SKHB delivered on every front: the kitchen, the dining room, even the cellar. We opened on schedule and haven't looked back.</blockquote>
+      <div class="testimonial-author">Maria S.</div>
+      <div class="testimonial-role">Director, Lisboeta</div>
+    </div>
+    <div class="testimonial-card">
+      <blockquote>What sets SKHB apart is that they genuinely understand restaurants. They think about how a space will work during a busy service, not just how it looks. That knowledge is invaluable.</blockquote>
+      <div class="testimonial-author">Daniel R.</div>
+      <div class="testimonial-role">Founder, Casa do Frango</div>
     </div>
   </div>
 </section>
@@ -1395,31 +1426,7 @@ footer {
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
-<!-- NOTE: These testimonials are PLACEHOLDERS. Replace with real quotes from clients. -->
-<section class="bg-linen">
-  <div class="section-header">
-    <h2>What Our Clients Say</h2>
-    <div class="line"></div>
-  </div>
-  <div class="testimonials-grid">
-    <div class="testimonial-card">
-      <blockquote>From the first site visit to handing over the keys, Sununu and his team were exceptional. They understood exactly what we needed and delivered a space that exceeded our expectations. The attention to detail is remarkable.</blockquote>
-      <div class="testimonial-author">James T.</div>
-      <div class="testimonial-role">Restaurant Owner, Kudu Grill</div>
-    </div>
-    <div class="testimonial-card">
-      <blockquote>We needed a team who could work to a tight deadline without cutting corners. SKHB delivered on every front: the kitchen, the dining room, even the cellar. We opened on schedule and haven't looked back.</blockquote>
-      <div class="testimonial-author">Maria S.</div>
-      <div class="testimonial-role">Director, Lisboeta</div>
-    </div>
-    <div class="testimonial-card">
-      <blockquote>What sets SKHB apart is that they genuinely understand restaurants. They think about how a space will work during a busy service, not just how it looks. That knowledge is invaluable.</blockquote>
-      <div class="testimonial-author">Daniel R.</div>
-      <div class="testimonial-role">Founder, Casa do Frango</div>
-    </div>
-  </div>
-</section>
+<!-- TESTIMONIALS moved higher -->
 
 <!-- PRESS / FEATURED IN -->
 <section class="bg-white" style="padding: 48px 24px;">
