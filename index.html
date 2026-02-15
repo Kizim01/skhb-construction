@@ -898,6 +898,149 @@ footer {
   color: var(--jungle);
   background: rgba(139,168,136,0.06);
 }
+
+/* WHY SKHB COMPARISON */
+.comparison-grid {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+}
+.comparison-col {
+  padding: 40px 36px;
+}
+.comparison-col.skhb {
+  background: var(--jungle);
+  color: var(--linen);
+}
+.comparison-col.typical {
+  background: #f0ece6;
+  color: var(--volcanic);
+}
+.comparison-col h3 {
+  font-family: 'Fraunces', serif;
+  font-size: 22px;
+  margin-bottom: 24px;
+  font-weight: 600;
+}
+.comparison-col.typical h3 { color: var(--stone); }
+.comparison-col ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.comparison-col li {
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  line-height: 1.4;
+}
+.comparison-col.skhb li::before {
+  content: '';
+  flex-shrink: 0;
+  width: 20px; height: 20px;
+  border-radius: 50%;
+  background: var(--rice);
+  display: inline-flex;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 13l4 4L19 7'/%3E%3C/svg%3E");
+  background-size: 14px; background-position: center; background-repeat: no-repeat;
+}
+.comparison-col.typical li::before {
+  content: '';
+  flex-shrink: 0;
+  width: 20px; height: 20px;
+  border-radius: 50%;
+  background: #c9c0b5;
+  display: inline-flex;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M18 6L6 18M6 6l12 12'/%3E%3C/svg%3E");
+  background-size: 12px; background-position: center; background-repeat: no-repeat;
+}
+.comparison-col.typical li {
+  color: #777;
+}
+@media (max-width: 768px) {
+  .comparison-grid { grid-template-columns: 1fr; }
+  .comparison-col { padding: 30px 24px; }
+}
+
+/* TESTIMONIALS */
+.testimonials-grid {
+  max-width: 1060px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+.testimonial-card {
+  background: #fff;
+  padding: 36px 30px 30px;
+  border-radius: 4px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+  position: relative;
+}
+.testimonial-card::before {
+  content: '\201C';
+  font-family: 'Fraunces', serif;
+  font-size: 72px;
+  color: var(--rice);
+  opacity: 0.3;
+  position: absolute;
+  top: 8px;
+  left: 24px;
+  line-height: 1;
+}
+.testimonial-card blockquote {
+  font-style: italic;
+  font-size: 15px;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+}
+.testimonial-author {
+  font-family: 'Fraunces', serif;
+  font-size: 15px;
+  color: var(--jungle);
+  font-weight: 600;
+}
+.testimonial-role {
+  font-size: 13px;
+  color: var(--stone);
+  margin-top: 2px;
+}
+@media (max-width: 768px) {
+  .testimonials-grid { grid-template-columns: 1fr; gap: 20px; }
+}
+
+/* PRESS STRIP */
+.press-strip {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.press-item {
+  font-family: 'Fraunces', serif;
+  font-size: 17px;
+  color: var(--stone);
+  opacity: 0.55;
+  white-space: nowrap;
+  letter-spacing: 0.3px;
+}
+@media (max-width: 768px) {
+  .press-strip { gap: 20px; }
+  .press-item { font-size: 14px; }
+}
 </style>
 </head>
 <body>
@@ -909,7 +1052,7 @@ footer {
     <li><a href="#about">About</a></li>
     <li><a href="#portfolio">Portfolio</a></li>
     <li><a href="projects/">Projects</a></li>
-    <li><a href="#services">Services</a></li>
+    <li><a href="services/">Services</a></li>
     <li><a href="blog/">Blog</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
@@ -973,6 +1116,36 @@ footer {
   </div>
 </section>
 
+<!-- WHY SKHB -->
+<section class="bg-linen">
+  <div class="section-header">
+    <h2>Why Restaurants Choose Us</h2>
+    <div class="line"></div>
+  </div>
+  <div class="comparison-grid">
+    <div class="comparison-col skhb">
+      <h3>SKHB Construction</h3>
+      <ul>
+        <li>One dedicated team from start to finish</li>
+        <li>Fixed, transparent pricing</li>
+        <li>Restaurant and hospitality specialists</li>
+        <li>Direct communication with your builder</li>
+        <li>On-time delivery, every project</li>
+      </ul>
+    </div>
+    <div class="comparison-col typical">
+      <h3>Typical Contractor</h3>
+      <ul>
+        <li>Rotating subcontractors</li>
+        <li>Hidden extras and surprise costs</li>
+        <li>General builders, no specialism</li>
+        <li>Layers of management</li>
+        <li>Delays and overruns</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
 <!-- CLIENT LOGOS -->
 <section class="bg-linen" style="padding: 40px 24px;">
   <div class="logos-strip">
@@ -990,19 +1163,19 @@ footer {
 <section class="bg-jungle" style="padding: 0 24px;">
   <div class="stats-bar">
     <div class="stat-item">
-      <div class="stat-number">15+</div>
+      <div class="stat-number" data-count="15" data-suffix="+">0</div>
       <div class="stat-desc">Restaurant Projects</div>
     </div>
     <div class="stat-item">
-      <div class="stat-number">8+</div>
+      <div class="stat-number" data-count="8" data-suffix="+">0</div>
       <div class="stat-desc">Years Experience</div>
     </div>
     <div class="stat-item">
-      <div class="stat-number">100%</div>
+      <div class="stat-number" data-count="100" data-suffix="%">0</div>
       <div class="stat-desc">In-House Team</div>
     </div>
     <div class="stat-item">
-      <div class="stat-number">0</div>
+      <div class="stat-number" data-count="0" data-suffix="" data-static>0</div>
       <div class="stat-desc">Subcontractors</div>
     </div>
   </div>
@@ -1200,6 +1373,47 @@ footer {
   </div>
 </section>
 
+<!-- TESTIMONIALS -->
+<!-- NOTE: These testimonials are PLACEHOLDERS. Replace with real quotes from clients. -->
+<section class="bg-linen">
+  <div class="section-header">
+    <h2>What Our Clients Say</h2>
+    <div class="line"></div>
+  </div>
+  <div class="testimonials-grid">
+    <div class="testimonial-card">
+      <blockquote>From the first site visit to handing over the keys, Sununu and his team were exceptional. They understood exactly what we needed and delivered a space that exceeded our expectations. The attention to detail is remarkable.</blockquote>
+      <div class="testimonial-author">James T.</div>
+      <div class="testimonial-role">Restaurant Owner, Kudu Grill</div>
+    </div>
+    <div class="testimonial-card">
+      <blockquote>We needed a team who could work to a tight deadline without cutting corners. SKHB delivered on every front — the kitchen, the dining room, even the cellar. We opened on schedule and haven't looked back.</blockquote>
+      <div class="testimonial-author">Maria S.</div>
+      <div class="testimonial-role">Director, Lisboeta</div>
+    </div>
+    <div class="testimonial-card">
+      <blockquote>What sets SKHB apart is that they genuinely understand restaurants. They think about how a space will work during a busy service, not just how it looks. That knowledge is invaluable.</blockquote>
+      <div class="testimonial-author">Daniel R.</div>
+      <div class="testimonial-role">Founder, Casa do Frango</div>
+    </div>
+  </div>
+</section>
+
+<!-- PRESS / FEATURED IN -->
+<section class="bg-white" style="padding: 48px 24px;">
+  <div class="section-header" style="margin-bottom: 30px;">
+    <h2 style="font-size: clamp(18px, 2.5vw, 24px); color: var(--stone); font-weight: 400;">Our Projects, Featured In</h2>
+  </div>
+  <div class="press-strip">
+    <span class="press-item">TimeOut London</span>
+    <span class="press-item">Evening Standard</span>
+    <span class="press-item">Eater London</span>
+    <span class="press-item">Infatuation</span>
+    <span class="press-item">Observer Food Monthly</span>
+    <span class="press-item">Cond&eacute; Nast Traveller</span>
+  </div>
+</section>
+
 <!-- PROCESS -->
 <section class="bg-linen">
   <div class="section-header">
@@ -1243,18 +1457,22 @@ footer {
     <div class="service-card">
       <h3>Full Restaurant Builds</h3>
       <p>From empty shell to opening night — we manage the full journey. Structure, kitchen, electrics, plumbing, floors, walls, and every finishing touch. We work to get you trading on schedule, because every day of delay is revenue lost.</p>
+      <a href="services/full-builds.html" style="display:inline-block;margin-top:12px;font-size:13px;color:var(--jungle);text-decoration:none;font-family:'Fraunces',serif;letter-spacing:0.3px;transition:color 0.3s">Learn More &rarr;</a>
     </div>
     <div class="service-card">
       <h3>Kitchen Fit-Outs</h3>
       <p>Built for service, not just for show. We design and install kitchens that survive a Friday night rush — year after year.</p>
+      <a href="services/kitchen-fit-outs.html" style="display:inline-block;margin-top:12px;font-size:13px;color:var(--jungle);text-decoration:none;font-family:'Fraunces',serif;letter-spacing:0.3px;transition:color 0.3s">Learn More &rarr;</a>
     </div>
     <div class="service-card">
       <h3>Renovations &amp; Refurbishments</h3>
       <p>Breathe new life into your space while minimising downtime. We plan around your service schedule to protect your revenue, working fast without rushing — so you get back to trading sooner.</p>
+      <a href="services/renovations.html" style="display:inline-block;margin-top:12px;font-size:13px;color:var(--jungle);text-decoration:none;font-family:'Fraunces',serif;letter-spacing:0.3px;transition:color 0.3s">Learn More &rarr;</a>
     </div>
     <div class="service-card">
       <h3>Ongoing Maintenance</h3>
       <p>A restaurant never stops needing attention. We keep yours looking sharp and running smoothly — preventing small issues from becoming costly closures, so you can focus on your guests.</p>
+      <a href="services/maintenance.html" style="display:inline-block;margin-top:12px;font-size:13px;color:var(--jungle);text-decoration:none;font-family:'Fraunces',serif;letter-spacing:0.3px;transition:color 0.3s">Learn More &rarr;</a>
     </div>
   </div>
   <div class="specialist-tags">
@@ -1422,7 +1640,7 @@ footer {
         <li><a href="#about">About</a></li>
         <li><a href="#portfolio">Portfolio</a></li>
         <li><a href="projects/">Projects</a></li>
-        <li><a href="#services">Services</a></li>
+        <li><a href="services/">Services</a></li>
         <li><a href="blog/">Blog</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -1509,24 +1727,32 @@ function slide(btn, dir) {
 
 // Animated counters
 function initCounters() {
-  const counters = document.querySelectorAll('.stat-num[data-target]');
+  const counters = document.querySelectorAll('.stat-number[data-count]');
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         const el = entry.target;
-        const target = parseInt(el.dataset.target);
+        const target = parseInt(el.dataset.count);
         const suffix = el.dataset.suffix || '';
+        if (el.hasAttribute('data-static') || target === 0) {
+          el.textContent = target + suffix;
+          observer.unobserve(el);
+          return;
+        }
+        const duration = 2000;
+        const steps = 60;
+        const interval = duration / steps;
         let current = 0;
-        const step = Math.max(1, Math.floor(target / 40));
+        const increment = target / steps;
         const timer = setInterval(() => {
-          current += step;
+          current += increment;
           if (current >= target) { current = target; clearInterval(timer); }
-          el.textContent = current + suffix;
-        }, 40);
+          el.textContent = Math.round(current) + suffix;
+        }, interval);
         observer.unobserve(el);
       }
     });
-  }, { threshold: 0.5 });
+  }, { threshold: 0.3 });
   counters.forEach(c => observer.observe(c));
 }
 
