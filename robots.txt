@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://kizim01.github.io/skhb-construction/sitemap.xml

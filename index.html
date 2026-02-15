@@ -34,6 +34,18 @@
   "knowsAbout": ["Restaurant Construction", "Kitchen Installation", "Tiling", "Plumbing", "Electrics", "Bespoke Joinery"]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "How long does a typical restaurant fit-out take?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on the scope. A simple renovation might take 4–6 weeks, while a complete build from shell can take 8–16 weeks."}},
+    {"@type": "Question", "name": "What areas of London do you cover?", "acceptedAnswer": {"@type": "Answer", "text": "We work across all of London — from South London to Central and London Bridge."}},
+    {"@type": "Question", "name": "Do you provide a fixed quote?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. After our initial consultation and site visit, we provide a detailed, transparent quote for the full scope of work. No hidden costs, no surprises."}},
+    {"@type": "Question", "name": "What makes SKHB different from other construction companies?", "acceptedAnswer": {"@type": "Answer", "text": "We specialise exclusively in restaurants and hospitality spaces. We handle everything under one roof — electrics, plumbing, tiling, carpentry, painting — one team, one quote, one standard."}}
+  ]
+}
+</script>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,600;9..144,700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -331,7 +343,157 @@ section { padding: 80px 24px; }
   line-height: 1.5;
 }
 
-/* SCROLL ANIMATIONS - disabled for compatibility */
+/* PARALLAX HERO */
+.hero {
+  background-attachment: fixed;
+}
+@supports (-webkit-touch-callout: none) {
+  .hero { background-attachment: scroll; }
+}
+
+/* STATS */
+.stats-strip {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  text-align: center;
+}
+.stat {
+  padding: 40px 20px;
+  border-right: 1px solid rgba(139,168,136,0.3);
+}
+.stat:last-child { border-right: none; }
+.stat-num {
+  font-family: 'Fraunces', serif;
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--linen);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.stat-label {
+  font-size: 13px;
+  color: rgba(255,255,255,0.65);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* CLIENT LOGOS */
+.logos-strip {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+.logo-item {
+  font-family: 'Fraunces', serif;
+  font-size: 18px;
+  color: var(--stone);
+  text-decoration: none;
+  transition: color 0.3s;
+  white-space: nowrap;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+.logo-item:hover { opacity: 1; color: var(--jungle); }
+
+/* CAROUSEL CAPTION */
+.carousel-wrap { position: relative; }
+.carousel-caption {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: 16px 20px;
+  background: linear-gradient(transparent, rgba(0,0,0,0.6));
+  color: var(--linen);
+  font-size: 13px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+.carousel-wrap:hover .carousel-caption { opacity: 1; }
+
+/* FAQ */
+.faq-list {
+  max-width: 750px;
+  margin: 0 auto;
+}
+.faq-item {
+  border-bottom: 1px solid #ddd;
+}
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 20px 0;
+  font-family: 'Fraunces', serif;
+  font-size: 18px;
+  color: var(--jungle);
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: color 0.3s;
+}
+.faq-question:hover { color: var(--bamboo); }
+.faq-arrow {
+  font-size: 20px;
+  transition: transform 0.3s;
+  color: var(--rice);
+}
+.faq-item.open .faq-arrow { transform: rotate(180deg); }
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+  font-size: 14px;
+  color: #555;
+  line-height: 1.7;
+}
+.faq-item.open .faq-answer {
+  max-height: 300px;
+  padding-bottom: 20px;
+}
+
+/* COOKIE NOTICE */
+.cookie-notice {
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  background: var(--volcanic);
+  color: var(--linen);
+  padding: 16px 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-size: 13px;
+  z-index: 160;
+  transform: translateY(100%);
+  transition: transform 0.4s ease;
+}
+.cookie-notice.show { transform: translateY(0); }
+.cookie-notice p { max-width: 600px; }
+.cookie-btn {
+  padding: 8px 24px;
+  background: var(--jungle);
+  color: var(--linen);
+  border: none;
+  font-family: 'Fraunces', serif;
+  font-size: 13px;
+  cursor: pointer;
+  border-radius: 4px;
+  white-space: nowrap;
+  transition: background 0.3s;
+}
+.cookie-btn:hover { background: var(--bamboo); }
+
+/* NAV ACTIVE */
+.nav-links a.active { color: var(--linen); }
 /* Clean layout */
 section { overflow: hidden; }
 footer { overflow: hidden; }
@@ -646,6 +808,11 @@ footer {
   .values-strip .v-item { padding: 20px 8px; }
   .process-steps { grid-template-columns: repeat(2, 1fr); gap: 30px; }
   .process-steps::before { display: none; }
+  .stats-strip { grid-template-columns: repeat(3, 1fr); }
+  .stat { padding: 24px 12px; }
+  .stat-num { font-size: 36px; }
+  .logos-strip { gap: 24px; }
+  .logo-item { font-size: 15px; }
   .services-grid { grid-template-columns: 1fr; gap: 20px; }
   .carousel-track img { height: 280px; }
   .project-header { flex-direction: column; gap: 4px; }
@@ -658,6 +825,7 @@ footer {
   .process-steps { grid-template-columns: 1fr; gap: 24px; }
   .carousel-track img { height: 220px; }
   .carousel-btn { width: 36px; height: 36px; font-size: 16px; }
+  .cookie-notice { flex-direction: column; text-align: center; gap: 12px; }
 }
 </style>
 </head>
@@ -728,6 +896,35 @@ footer {
       <h4>Honesty</h4>
       <p>No hidden costs. No surprises.</p>
     </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="bg-jungle" style="padding: 0 24px;">
+  <div class="stats-strip">
+    <div class="stat">
+      <div class="stat-num" data-target="5">0</div>
+      <div class="stat-label">Restaurants Built</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num" data-target="100" data-suffix="%">0%</div>
+      <div class="stat-label">On Time &amp; On Budget</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num" data-target="100" data-suffix="%">0%</div>
+      <div class="stat-label">Repeat &amp; Referral Clients</div>
+    </div>
+  </div>
+</section>
+
+<!-- CLIENT LOGOS -->
+<section class="bg-linen" style="padding: 40px 24px;">
+  <div class="logos-strip">
+    <a href="https://www.kuducollective.com/kudu-grill" target="_blank" rel="noopener" class="logo-item">Kudu Grill</a>
+    <a href="https://lisboeta.co.uk/" target="_blank" rel="noopener" class="logo-item">Lisboeta</a>
+    <a href="https://casadofrango.co.uk/londonbridge" target="_blank" rel="noopener" class="logo-item">Casa do Frango</a>
+    <a href="https://www.revjwsimpson.com" target="_blank" rel="noopener" class="logo-item">Rev J W Simpson</a>
+    <a href="https://www.vinegaryard.london" target="_blank" rel="noopener" class="logo-item">Vinegar Yard</a>
   </div>
 </section>
 
@@ -944,6 +1141,70 @@ footer {
   </div>
 </section>
 
+<!-- FAQ -->
+<section class="bg-linen">
+  <div class="section-header">
+    <h2>Frequently Asked Questions</h2>
+    <div class="line"></div>
+  </div>
+  <div class="faq-list">
+    <div class="faq-item">
+      <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+        How long does a typical restaurant fit-out take?
+        <span class="faq-arrow">▾</span>
+      </button>
+      <div class="faq-answer">
+        It depends on the scope. A simple renovation might take 4–6 weeks, while a complete build from shell can take 8–16 weeks. We'll give you a realistic timeline during our initial consultation and keep you updated throughout.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+        Do you handle planning permission and building regulations?
+        <span class="faq-arrow">▾</span>
+      </button>
+      <div class="faq-answer">
+        We can advise on what permissions you'll need and work with your architects and planning consultants. For building regulations, we ensure all our work meets current standards and coordinate any required inspections.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+        What areas of London do you cover?
+        <span class="faq-arrow">▾</span>
+      </button>
+      <div class="faq-answer">
+        We work across all of London — from South London (where we built Kudu Grill) to Central (Lisboeta, Rev J W Simpson) and London Bridge (Casa do Frango, Vinegar Yard). If your project is in London, we'd love to hear about it.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+        Can you work while the restaurant is still open?
+        <span class="faq-arrow">▾</span>
+      </button>
+      <div class="faq-answer">
+        Yes — for renovations and maintenance, we often work around your service schedule. We plan carefully to minimise disruption and can work overnight or during off-hours when needed.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+        Do you provide a fixed quote?
+        <span class="faq-arrow">▾</span>
+      </button>
+      <div class="faq-answer">
+        Yes. After our initial consultation and site visit, we provide a detailed, transparent quote for the full scope of work. No hidden costs, no surprises. If anything changes during the build, we discuss it with you first.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+        What makes SKHB different from other construction companies?
+        <span class="faq-arrow">▾</span>
+      </button>
+      <div class="faq-answer">
+        We specialise exclusively in restaurants and hospitality spaces. We handle everything under one roof — electrics, plumbing, tiling, carpentry, painting — so you deal with one team, one quote, and one standard. No subcontractor roulette.
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- CONTACT -->
 <section id="contact" class="bg-white">
   <div class="section-header">
@@ -1004,6 +1265,12 @@ footer {
     <p>&copy; 2026 SKHB Construction Ltd. All rights reserved.</p>
   </div>
 </footer>
+
+<!-- COOKIE NOTICE -->
+<div class="cookie-notice" id="cookieNotice">
+  <p>We use cookies to ensure you get the best experience on our website.</p>
+  <button class="cookie-btn" onclick="document.getElementById('cookieNotice').classList.remove('show');localStorage.setItem('cookies_accepted','1')">Accept</button>
+</div>
 
 <!-- BACK TO TOP -->
 <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
@@ -1073,7 +1340,50 @@ function slide(btn, dir) {
   wrap.resetAuto();
 }
 
-// Scroll animations disabled for iPad compatibility
+// Animated counters
+function initCounters() {
+  const counters = document.querySelectorAll('.stat-num[data-target]');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        const target = parseInt(el.dataset.target);
+        const suffix = el.dataset.suffix || '';
+        let current = 0;
+        const step = Math.max(1, Math.floor(target / 40));
+        const timer = setInterval(() => {
+          current += step;
+          if (current >= target) { current = target; clearInterval(timer); }
+          el.textContent = current + suffix;
+        }, 40);
+        observer.unobserve(el);
+      }
+    });
+  }, { threshold: 0.5 });
+  counters.forEach(c => observer.observe(c));
+}
+
+// Nav highlight on scroll
+function initNavHighlight() {
+  const sections = document.querySelectorAll('section[id]');
+  const links = document.querySelectorAll('.nav-links a[href^="#"]');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => {
+      if (window.scrollY >= s.offsetTop - 100) current = s.id;
+    });
+    links.forEach(a => {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+    });
+  });
+}
+
+// Cookie notice
+function initCookie() {
+  if (!localStorage.getItem('cookies_accepted')) {
+    setTimeout(() => document.getElementById('cookieNotice').classList.add('show'), 1500);
+  }
+}
 
 // Image blur load
 function initBlurLoad() {
@@ -1119,6 +1429,9 @@ document.querySelectorAll('.nav-links a').forEach(a => {
 initCarousels();
 initBlurLoad();
 initBackToTop();
+initCounters();
+initNavHighlight();
+initCookie();
 </script>
 
 </body>
