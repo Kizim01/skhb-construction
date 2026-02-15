@@ -327,13 +327,16 @@ section { padding: 80px 24px; }
 /* SCROLL ANIMATIONS */
 .reveal {
   opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  will-change: opacity, transform;
 }
 .reveal.visible {
   opacity: 1;
   transform: translateY(0);
 }
+/* Ensure no extra space from off-screen transforms */
+section { overflow: hidden; }
 
 /* IMAGE BLUR LOAD */
 .blur-load {
