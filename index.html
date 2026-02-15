@@ -805,6 +805,99 @@ footer {
   .carousel-track img { height: 220px; }
   .carousel-btn { width: 36px; height: 36px; font-size: 16px; }
 }
+
+/* STATS BAR */
+.stats-bar {
+  max-width: 1060px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  text-align: center;
+}
+.stats-bar .stat-item {
+  padding: 40px 20px;
+  border-right: 1px solid rgba(139,168,136,0.3);
+}
+.stats-bar .stat-item:last-child { border-right: none; }
+.stats-bar .stat-number {
+  font-family: 'Fraunces', serif;
+  font-size: 44px;
+  font-weight: 700;
+  color: var(--linen);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.stats-bar .stat-desc {
+  font-size: 13px;
+  color: rgba(255,255,255,0.65);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+@media (max-width: 768px) {
+  .stats-bar { grid-template-columns: repeat(2, 1fr); }
+  .stats-bar .stat-item { padding: 24px 12px; }
+  .stats-bar .stat-number { font-size: 34px; }
+  .stats-bar .stat-item:nth-child(2) { border-right: none; }
+}
+@media (max-width: 480px) {
+  .stats-bar { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* BROCHURE BUTTON */
+.btn-secondary {
+  display: inline-block;
+  padding: 10px 28px;
+  border: 1.5px solid var(--stone);
+  color: var(--bamboo);
+  text-decoration: none;
+  font-family: 'Fraunces', serif;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  transition: all 0.3s;
+  margin-top: 16px;
+}
+.btn-secondary:hover { background: var(--jungle); color: var(--linen); border-color: var(--jungle); }
+
+/* ACCREDITATIONS */
+.accreditations-strip {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  flex-wrap: wrap;
+  font-size: 14px;
+  color: var(--stone);
+  letter-spacing: 0.3px;
+}
+.accreditations-strip .acc-divider {
+  width: 1px; height: 16px;
+  background: rgba(168,146,121,0.4);
+}
+@media (max-width: 480px) {
+  .accreditations-strip { gap: 16px; font-size: 13px; }
+  .accreditations-strip .acc-divider { display: none; }
+}
+
+/* AREAS */
+.areas-grid {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+.area-tag {
+  padding: 6px 20px;
+  border: 1px solid rgba(139,168,136,0.35);
+  border-radius: 24px;
+  font-size: 13px;
+  color: var(--jungle);
+  background: rgba(139,168,136,0.06);
+}
 </style>
 </head>
 <body>
@@ -815,6 +908,7 @@ footer {
   <ul class="nav-links" id="navLinks">
     <li><a href="#about">About</a></li>
     <li><a href="#portfolio">Portfolio</a></li>
+    <li><a href="projects/">Projects</a></li>
     <li><a href="#services">Services</a></li>
     <li><a href="blog/">Blog</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -840,8 +934,10 @@ footer {
       <h3>We Build Where People Gather</h3>
       <p>SKHB Construction Ltd is a London-based construction company specialising in building and maintaining beautiful restaurant spaces. From complete builds to ongoing maintenance, we handle every detail under one roof.</p>
       <p>From a complete kitchen fit-out to the final coat of paint, we manage everything ourselves — electrics, plumbing, tiling, joinery, the lot. No subcontractor roulette. One team, one standard.</p>
-      <p>Founded by Sununu, SKHB is built on strong client relationships and honest communication. We listen first, plan precisely, and deliver exceptional workmanship within your budget and timeline.</p>
+      <p>Founded by Sununu, SKHB Construction is a hands-on team of specialists who have spent years learning what makes hospitality spaces work. Every member of our crew understands the unique demands of restaurant environments — from gas-safe kitchens to front-of-house finishes that need to survive thousands of covers.</p>
+      <p>We listen first, plan precisely, and deliver exceptional workmanship within your budget and timeline. Our goal is simple: get you open and trading as quickly as possible, without cutting a single corner.</p>
       <p class="highlight">We're not the biggest. We're the ones who get it right.</p>
+      <a href="SKHB-Brand-Brief.pdf" class="btn-secondary" target="_blank" rel="noopener">Download Our Company Profile</a>
     </div>
     <img src="images/img-002.jpg" alt="Elegant restaurant interior by SKHB" class="about-img">
   </div>
@@ -887,6 +983,28 @@ footer {
     <a href="https://www.revjwsimpson.com" target="_blank" rel="noopener" class="logo-item">Rev J W Simpson</a>
     <a href="#portfolio" class="logo-item">Fonda</a>
     <a href="https://www.vinegaryard.london" target="_blank" rel="noopener" class="logo-item">Vinegar Yard</a>
+  </div>
+</section>
+
+<!-- STATS BAR -->
+<section class="bg-jungle" style="padding: 0 24px;">
+  <div class="stats-bar">
+    <div class="stat-item">
+      <div class="stat-number">15+</div>
+      <div class="stat-desc">Restaurant Projects</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">8+</div>
+      <div class="stat-desc">Years Experience</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">100%</div>
+      <div class="stat-desc">In-House Team</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">0</div>
+      <div class="stat-desc">Subcontractors</div>
+    </div>
   </div>
 </section>
 
@@ -1124,7 +1242,7 @@ footer {
   <div class="services-grid">
     <div class="service-card">
       <h3>Full Restaurant Builds</h3>
-      <p>From empty shell to opening night — we manage the full journey. Structure, kitchen, electrics, plumbing, floors, walls, and every finishing touch that makes your guests say "wow."</p>
+      <p>From empty shell to opening night — we manage the full journey. Structure, kitchen, electrics, plumbing, floors, walls, and every finishing touch. We work to get you trading on schedule, because every day of delay is revenue lost.</p>
     </div>
     <div class="service-card">
       <h3>Kitchen Fit-Outs</h3>
@@ -1132,11 +1250,11 @@ footer {
     </div>
     <div class="service-card">
       <h3>Renovations &amp; Refurbishments</h3>
-      <p>Breathe new life into your space without losing a service more than you need to. We plan around your schedule and work fast without rushing.</p>
+      <p>Breathe new life into your space while minimising downtime. We plan around your service schedule to protect your revenue, working fast without rushing — so you get back to trading sooner.</p>
     </div>
     <div class="service-card">
       <h3>Ongoing Maintenance</h3>
-      <p>A restaurant never stops needing attention. We keep yours looking sharp and running smoothly — so you can focus on your guests.</p>
+      <p>A restaurant never stops needing attention. We keep yours looking sharp and running smoothly — preventing small issues from becoming costly closures, so you can focus on your guests.</p>
     </div>
   </div>
   <div class="specialist-tags">
@@ -1151,6 +1269,47 @@ footer {
     <span class="specialist-tag">Custom Furniture</span>
     <span class="specialist-tag">Upholstery</span>
     <span class="specialist-tag">Custom Planters</span>
+  </div>
+</section>
+
+<!-- ACCREDITATIONS -->
+<section class="bg-linen" style="padding: 32px 24px;">
+  <div class="accreditations-strip">
+    <span>Fully Insured</span>
+    <span class="acc-divider"></span>
+    <span>Health &amp; Safety Compliant</span>
+    <span class="acc-divider"></span>
+    <span>CSCS Certified</span>
+    <span class="acc-divider"></span>
+    <span>PAT Testing</span>
+    <span class="acc-divider"></span>
+    <span>Waste Carrier Licensed</span>
+  </div>
+</section>
+
+<!-- AREAS WE COVER -->
+<section class="bg-white">
+  <div class="section-header">
+    <h2>Areas We Cover</h2>
+    <p>Restaurant construction and fit-out services across London</p>
+    <div class="line"></div>
+  </div>
+  <div class="areas-grid">
+    <span class="area-tag">Peckham</span>
+    <span class="area-tag">London Bridge</span>
+    <span class="area-tag">Fitzrovia</span>
+    <span class="area-tag">Soho</span>
+    <span class="area-tag">Mayfair</span>
+    <span class="area-tag">Southwark</span>
+    <span class="area-tag">Bermondsey</span>
+    <span class="area-tag">Shoreditch</span>
+    <span class="area-tag">Brixton</span>
+    <span class="area-tag">Battersea</span>
+    <span class="area-tag">Clapham</span>
+    <span class="area-tag">Covent Garden</span>
+    <span class="area-tag">Marylebone</span>
+    <span class="area-tag">Notting Hill</span>
+    <span class="area-tag">Kings Cross</span>
   </div>
 </section>
 
@@ -1262,6 +1421,7 @@ footer {
       <ul>
         <li><a href="#about">About</a></li>
         <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="projects/">Projects</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="blog/">Blog</a></li>
         <li><a href="#contact">Contact</a></li>
