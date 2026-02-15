@@ -45,7 +45,8 @@
   --volcanic: #1E1E1E;
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; height: -webkit-fill-available; }
+body { min-height: -webkit-fill-available; }
 body {
   font-family: 'Libre Baskerville', Georgia, serif;
   color: var(--volcanic);
@@ -85,6 +86,7 @@ nav {
 /* HERO */
 .hero {
   height: 100vh;
+  height: 100dvh;
   background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.5)), url('images/img-000.jpg') center/cover no-repeat;
   display: flex; align-items: center; justify-content: center;
   text-align: center; color: var(--linen);
@@ -337,6 +339,12 @@ section { padding: 80px 24px; }
 }
 /* Ensure no extra space from off-screen transforms */
 section { overflow: hidden; }
+footer { overflow: hidden; }
+
+/* iPad fix - prevent extra scroll */
+@supports (-webkit-touch-callout: none) {
+  html, body { height: -webkit-fill-available; }
+}
 
 /* IMAGE BLUR LOAD */
 .blur-load {
@@ -612,6 +620,7 @@ footer {
 .lightbox {
   display: none;
   position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+  width: 100%; height: 100%;
   background: rgba(0,0,0,0.92);
   z-index: 200;
   align-items: center; justify-content: center;
