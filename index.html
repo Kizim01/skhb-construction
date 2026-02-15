@@ -45,8 +45,7 @@
   --volcanic: #1E1E1E;
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; height: -webkit-fill-available; }
-body { min-height: -webkit-fill-available; }
+html { scroll-behavior: smooth; }
 body {
   font-family: 'Libre Baskerville', Georgia, serif;
   color: var(--volcanic);
@@ -326,22 +325,10 @@ section { padding: 80px 24px; }
   line-height: 1.5;
 }
 
-/* SCROLL ANIMATIONS */
-.reveal {
-  opacity: 0;
-  transition: opacity 0.6s ease;
-}
-.reveal.visible {
-  opacity: 1;
-}
-/* Ensure no extra space from off-screen transforms */
+/* SCROLL ANIMATIONS - disabled for compatibility */
+/* Clean layout */
 section { overflow: hidden; }
 footer { overflow: hidden; }
-
-/* iPad fix - prevent extra scroll */
-@supports (-webkit-touch-callout: none) {
-  html, body { height: -webkit-fill-available; }
-}
 
 /* IMAGE BLUR LOAD */
 .blur-load {
@@ -696,7 +683,7 @@ footer {
 
 <!-- ABOUT -->
 <section id="about" class="bg-linen">
-  <div class="about-grid reveal">
+  <div class="about-grid">
     <div class="about-text">
       <h3>We Build Where People Gather</h3>
       <p>SKHB Construction Ltd is a London-based construction company specialising in building and maintaining beautiful restaurant spaces. From complete builds to ongoing maintenance, we handle every detail under one roof.</p>
@@ -710,7 +697,7 @@ footer {
 
 <!-- VALUES -->
 <section class="bg-jungle" style="padding: 0 24px;">
-  <div class="values-strip reveal">
+  <div class="values-strip">
     <div class="v-item">
       <h4>Relationships</h4>
       <p>We listen first, then build.</p>
@@ -740,11 +727,11 @@ footer {
 
 <!-- FEATURED PROJECT -->
 <section class="bg-white">
-  <div class="section-header reveal">
+  <div class="section-header">
     <h2>Featured Project</h2>
     <div class="line"></div>
   </div>
-  <div class="featured reveal">
+  <div class="featured">
     <img src="images/img-000.jpg" alt="Kudu Grill main dining room" class="featured-img blur-load">
     <div class="featured-text">
       <h3>Kudu Grill</h3>
@@ -769,7 +756,7 @@ footer {
 
 <!-- PORTFOLIO -->
 <section id="portfolio" class="bg-white">
-  <div class="section-header reveal">
+  <div class="section-header">
     <h2>Our Work</h2>
     <p>Selected restaurant builds and fit-outs across London</p>
     <div class="line"></div>
@@ -882,12 +869,12 @@ footer {
 
 <!-- PROCESS -->
 <section class="bg-linen">
-  <div class="section-header reveal">
+  <div class="section-header">
     <h2>How We Work</h2>
     <p>From first conversation to final handover — a clear, simple process</p>
     <div class="line"></div>
   </div>
-  <div class="process-steps reveal">
+  <div class="process-steps">
     <div class="step">
       <div class="step-num">1</div>
       <h4>Consultation</h4>
@@ -913,13 +900,13 @@ footer {
 
 <!-- SERVICES -->
 <section id="services" class="bg-white">
-  <div class="section-header reveal">
+  <div class="section-header">
     <h2>What We Do</h2>
     <p>End-to-end construction and maintenance for restaurants</p>
 
     <div class="line"></div>
   </div>
-  <div class="services-grid reveal">
+  <div class="services-grid">
     <div class="service-card">
       <h3>Full Restaurant Builds</h3>
       <p>From empty shell to opening night — we manage the full journey. Structure, kitchen, electrics, plumbing, floors, walls, and every finishing touch that makes your guests say "wow."</p>
@@ -1080,18 +1067,7 @@ function slide(btn, dir) {
   wrap.resetAuto();
 }
 
-// Scroll animations
-function initReveal() {
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.05, rootMargin: '0px 0px 50px 0px' });
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-}
+// Scroll animations disabled for iPad compatibility
 
 // Image blur load
 function initBlurLoad() {
@@ -1132,14 +1108,9 @@ document.querySelectorAll('.nav-links a').forEach(a => {
   a.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open'));
 });
 
-// Fallback: force all reveals visible after 2s in case observer fails
-setTimeout(() => {
-  document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
-}, 2000);
 
 // Init everything
 initCarousels();
-initReveal();
 initBlurLoad();
 initBackToTop();
 </script>
