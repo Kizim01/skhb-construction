@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Design &amp; Technology — LiDAR Scanning &amp; 3D Design | SKHB Construction</title>
+<meta name="description" content="SKHB Construction uses LiDAR 3D scanning and SketchUp modelling to plan restaurant fit-outs with millimetre accuracy. The only small restaurant construction company in London using this technology.">
+<meta name="keywords" content="LiDAR scanning restaurant construction, 3D design restaurant fit-out London, LiDAR 3D scanning construction, restaurant design technology, point cloud scanning London, SketchUp restaurant design">
+<meta property="og:title" content="Design &amp; Technology — LiDAR Scanning &amp; 3D Design | SKHB Construction">
+<meta property="og:description" content="From LiDAR scan to finished build. See how SKHB uses 3D scanning technology to deliver precision restaurant construction in London.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://kizim01.github.io/skhb-construction/design-technology.html">
+<meta property="og:image" content="https://kizim01.github.io/skhb-construction/images/lidar-007.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://kizim01.github.io/skhb-construction/design-technology.html">
+<link rel="icon" type="image/png" href="favicon-32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="favicon.png" sizes="64x64">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,600;9..144,700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --jungle: #2D5A3D;
+  --bamboo: #5C4033;
+  --linen: #F7F3ED;
+  --rice: #8BA888;
+  --stone: #A89279;
+  --volcanic: #1E1E1E;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  color: var(--linen);
+  background: var(--volcanic);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* NAV */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(30,30,30,0.95);
+  backdrop-filter: blur(10px);
+  padding: 16px 40px;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.nav-logo {
+  font-family: 'Fraunces', serif;
+  font-size: 20px; font-weight: 700;
+  color: var(--linen);
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+.nav-links { display: flex; gap: 28px; list-style: none; }
+.nav-links a {
+  color: var(--rice);
+  text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  transition: color 0.3s;
+  text-transform: uppercase;
+}
+.nav-links a:hover, .nav-links a.active { color: var(--linen); }
+.hamburger { display: none; cursor: pointer; flex-direction: column; gap: 5px; background: none; border: none; padding: 5px; }
+.hamburger span { width: 24px; height: 2px; background: var(--linen); transition: 0.3s; display: block; }
+
+/* HERO */
+.hero {
+  height: 100vh;
+  height: 100dvh;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('images/lidar-007.jpg') center/cover no-repeat;
+  display: flex; align-items: center; justify-content: center;
+  text-align: center; color: var(--linen);
+  padding: 0 20px;
+}
+.hero h1 {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(32px, 5vw, 56px);
+  font-weight: 700;
+  margin-bottom: 16px;
+  line-height: 1.15;
+}
+.hero p {
+  font-size: clamp(15px, 2vw, 20px);
+  font-style: italic;
+  opacity: 0.9;
+  margin-bottom: 32px;
+}
+.btn {
+  display: inline-block;
+  padding: 13px 36px;
+  border: 2px solid var(--rice);
+  color: var(--linen);
+  text-decoration: none;
+  font-family: 'Fraunces', serif;
+  font-size: 15px;
+  letter-spacing: 1px;
+  transition: all 0.3s;
+}
+.btn:hover { background: var(--jungle); border-color: var(--jungle); }
+
+/* SECTIONS */
+section { padding: 80px 24px; }
+.bg-volcanic { background: var(--volcanic); color: var(--linen); }
+.bg-dark-alt { background: #151515; color: var(--linen); }
+.bg-jungle { background: var(--jungle); color: var(--linen); }
+
+.section-header {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 50px;
+}
+.section-header h2 {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(26px, 3.5vw, 36px);
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: var(--linen);
+}
+.section-header p {
+  font-size: 15px;
+  color: var(--rice);
+}
+.section-header .line {
+  width: 50px; height: 2px;
+  background: var(--rice);
+  margin: 16px auto 0;
+}
+
+/* INTRO */
+.intro-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.intro-content p {
+  font-size: 16px;
+  color: rgba(247,243,237,0.85);
+  margin-bottom: 20px;
+  line-height: 1.8;
+}
+.intro-content .lead {
+  font-family: 'Fraunces', serif;
+  font-size: 20px;
+  color: var(--rice);
+  font-style: italic;
+  margin-bottom: 28px;
+}
+
+/* PROCESS STEPS */
+.process-step {
+  max-width: 1100px;
+  margin: 0 auto 80px;
+}
+.process-step:last-child { margin-bottom: 0; }
+.step-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+.step-number {
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  background: var(--jungle);
+  color: var(--linen);
+  font-family: 'Fraunces', serif;
+  font-size: 24px;
+  font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  border: 2px solid var(--rice);
+}
+.step-header h3 {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(22px, 3vw, 30px);
+  font-weight: 600;
+  color: var(--linen);
+}
+.step-desc {
+  font-size: 15px;
+  color: rgba(247,243,237,0.75);
+  max-width: 700px;
+  margin-bottom: 24px;
+  line-height: 1.7;
+}
+.step-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+.step-images img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+.step-images img:hover { transform: scale(1.02); }
+.step-images.three-col {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* GALLERY */
+.gallery-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+.gallery-grid img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.3s, filter 0.3s;
+}
+.gallery-grid img:hover {
+  transform: scale(1.03);
+  filter: brightness(1.1);
+}
+
+/* BENEFITS */
+.benefits-grid {
+  max-width: 1060px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+.benefit-card {
+  padding: 36px 28px;
+  background: rgba(255,255,255,0.04);
+  border-left: 3px solid var(--rice);
+  border-radius: 2px;
+}
+.benefit-card h3 {
+  font-family: 'Fraunces', serif;
+  font-size: 20px;
+  color: var(--linen);
+  margin-bottom: 12px;
+}
+.benefit-card p {
+  font-size: 14px;
+  color: rgba(247,243,237,0.65);
+  line-height: 1.7;
+}
+
+/* CTA */
+.cta-section {
+  text-align: center;
+  padding: 80px 24px;
+}
+.cta-section h2 {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(24px, 3.5vw, 36px);
+  color: var(--linen);
+  margin-bottom: 16px;
+}
+.cta-section p {
+  font-size: 16px;
+  color: var(--rice);
+  max-width: 600px;
+  margin: 0 auto 32px;
+}
+
+/* FOOTER */
+footer {
+  background: var(--volcanic);
+  color: var(--stone);
+  padding: 60px 24px 32px;
+  font-size: 13px;
+  border-top: 1px solid rgba(168,146,121,0.2);
+}
+.footer-grid {
+  max-width: 1060px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+.footer-brand h3 {
+  font-family: 'Fraunces', serif;
+  font-size: 20px;
+  color: var(--linen);
+  margin-bottom: 10px;
+}
+.footer-brand p { font-size: 13px; color: var(--stone); line-height: 1.6; max-width: 300px; }
+.footer-links h4, .footer-contact h4 {
+  font-family: 'Fraunces', serif;
+  font-size: 14px;
+  color: var(--linen);
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.footer-links ul { list-style: none; }
+.footer-links li { margin-bottom: 8px; }
+.footer-links a, .footer-contact a {
+  color: var(--stone);
+  text-decoration: none;
+  transition: color 0.3s;
+  font-size: 13px;
+}
+.footer-links a:hover, .footer-contact a:hover { color: var(--rice); }
+.footer-contact p { margin-bottom: 8px; font-size: 13px; }
+.footer-bottom {
+  border-top: 1px solid rgba(168,146,121,0.2);
+  padding-top: 24px;
+  text-align: center;
+  font-size: 12px;
+}
+
+/* LIGHTBOX */
+.lightbox {
+  display: none;
+  position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.95);
+  z-index: 200;
+  align-items: center; justify-content: center;
+  cursor: pointer;
+}
+.lightbox.active { display: flex; }
+.lightbox img { max-width: 92%; max-height: 92vh; object-fit: contain; }
+
+/* WHATSAPP */
+.whatsapp-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 150;
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  background: #25D366;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  transition: transform 0.3s;
+  text-decoration: none;
+}
+.whatsapp-float:hover { transform: scale(1.1); }
+.whatsapp-float svg { width: 30px; height: 30px; fill: #fff; }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  nav { padding: 14px 20px; }
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+  .nav-links.open {
+    display: flex; flex-direction: column;
+    position: absolute; top: 56px; right: 16px;
+    background: rgba(30,30,30,0.98);
+    padding: 16px 24px;
+    border-radius: 4px;
+    gap: 12px;
+  }
+  section { padding: 60px 16px; }
+  .step-images { grid-template-columns: 1fr; }
+  .step-images.three-col { grid-template-columns: 1fr; }
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+  .benefits-grid { grid-template-columns: 1fr; gap: 20px; }
+  .footer-grid { grid-template-columns: 1fr; gap: 24px; }
+  .step-images img { height: 240px; }
+  .gallery-grid img { height: 200px; }
+}
+@media (max-width: 480px) {
+  .gallery-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">SKHB</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#portfolio">Portfolio</a></li>
+    <li><a href="projects/">Projects</a></li>
+    <li><a href="services/">Services</a></li>
+    <li><a href="design-technology.html" class="active">Technology</a></li>
+    <li><a href="blog/">Blog</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+  <button class="hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div>
+    <h1>Design &amp; Technology</h1>
+    <p>From LiDAR Scan to Finished Build</p>
+    <a href="#process" class="btn">See Our Process</a>
+  </div>
+</section>
+
+<!-- INTRODUCTION -->
+<section class="bg-volcanic">
+  <div class="intro-content">
+    <p class="lead">We are the only small restaurant construction company in London using LiDAR 3D scanning and digital modelling as a standard part of our build process.</p>
+    <p>Before we pick up a single tool, we capture your entire space using a LiDAR scanner — the same technology used in architecture, engineering and film production. The scanner fires millions of laser pulses per second, creating a millimetre-accurate 3D point cloud of every wall, beam, pipe and surface in your venue.</p>
+    <p>This data becomes the foundation for everything that follows. We build precise 3D models in SketchUp, overlay them on the real scan data, and visualise the finished design within the actual space — before any construction begins. The result: fewer surprises, tighter cost estimates, and a finished build that matches what was promised.</p>
+    <p>For restaurant owners, this means less wasted time, less wasted money, and a space that works exactly as planned from day one.</p>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process" class="bg-dark-alt">
+  <div class="section-header">
+    <h2>Our Process</h2>
+    <p>Four steps from existing space to finished restaurant</p>
+    <div class="line"></div>
+  </div>
+
+  <!-- Step 1 -->
+  <div class="process-step">
+    <div class="step-header">
+      <div class="step-number">1</div>
+      <h3>LiDAR Scanning</h3>
+    </div>
+    <p class="step-desc">We bring our LiDAR scanner on site and capture the entire space in high-resolution 3D. The scanner sits on a tripod and rotates, firing millions of laser points to map every surface, corner and obstacle with millimetre precision. Multiple scan positions ensure complete coverage — nothing is missed.</p>
+    <div class="step-images">
+      <img src="images/design-007.jpg" alt="LiDAR scanner on tripod outside Smokey Kudu restaurant" loading="lazy" onclick="openLightbox(this.src)">
+      <img src="images/design-008.jpg" alt="LiDAR scanner scanning behind a bar, capturing bottle shelves" loading="lazy" onclick="openLightbox(this.src)">
+    </div>
+  </div>
+
+  <!-- Step 2 -->
+  <div class="process-step">
+    <div class="step-header">
+      <div class="step-number">2</div>
+      <h3>Point Cloud Data</h3>
+    </div>
+    <p class="step-desc">The scanner produces a detailed point cloud — millions of coloured data points that form a precise 3D map of the space. We can view floor plans from above, inspect ceiling structures, measure distances between any two points, and identify issues that would otherwise only surface mid-build. This data is the single source of truth for the entire project.</p>
+    <div class="step-images">
+      <img src="images/lidar-006.jpg" alt="LiDAR point cloud floor plan view showing room layout with measurements" loading="lazy" onclick="openLightbox(this.src)">
+      <img src="images/lidar-003.jpg" alt="LiDAR point cloud of interior bar and kitchen area from above" loading="lazy" onclick="openLightbox(this.src)">
+    </div>
+  </div>
+
+  <!-- Step 3 -->
+  <div class="process-step">
+    <div class="step-header">
+      <div class="step-number">3</div>
+      <h3>3D Design Modelling</h3>
+    </div>
+    <p class="step-desc">Using the point cloud as a foundation, we build accurate 3D models in SketchUp — designing the bar, kitchen, seating and every detail within the real dimensions of your space. We then overlay the design onto the LiDAR data, so you can see exactly how the finished restaurant will look inside the actual building. Changes are made digitally, not on site.</p>
+    <div class="step-images three-col">
+      <img src="images/design-001.jpg" alt="SketchUp 3D model showing bar layout with floor plan" loading="lazy" onclick="openLightbox(this.src)">
+      <img src="images/design-002.jpg" alt="SketchUp model overlaid with LiDAR point cloud data" loading="lazy" onclick="openLightbox(this.src)">
+      <img src="images/design-003.jpg" alt="Full LiDAR overlay with SketchUp design showing brick arches" loading="lazy" onclick="openLightbox(this.src)">
+    </div>
+  </div>
+
+  <!-- Step 4 -->
+  <div class="process-step">
+    <div class="step-header">
+      <div class="step-number">4</div>
+      <h3>The Finished Build</h3>
+    </div>
+    <p class="step-desc">Then we build it. Because the planning was precise, the construction is precise. What you saw in the 3D model is what you get in reality — a finished restaurant that matches the design, delivered on time and on budget.</p>
+    <div class="step-images three-col">
+      <img src="images/design-004.jpg" alt="Finished restaurant bar with terrazzo counter, arched wine shelving and chandelier" loading="lazy" onclick="openLightbox(this.src)">
+      <img src="images/design-005.jpg" alt="Finished restaurant open kitchen with tiled bar counter and wine shelving" loading="lazy" onclick="openLightbox(this.src)">
+      <img src="images/design-006.jpg" alt="Finished restaurant wider angle showing arched ceiling, chandelier and full bar" loading="lazy" onclick="openLightbox(this.src)">
+    </div>
+  </div>
+</section>
+
+<!-- LIDAR GALLERY -->
+<section class="bg-volcanic">
+  <div class="section-header">
+    <h2>LiDAR Point Cloud Gallery</h2>
+    <p>Raw 3D scan data — millions of laser points mapping real spaces</p>
+    <div class="line"></div>
+  </div>
+  <div class="gallery-grid">
+    <img src="images/lidar-001.jpg" alt="LiDAR point cloud aerial view of outdoor venue area" loading="lazy" onclick="openLightbox(this.src)">
+    <img src="images/lidar-007.jpg" alt="LiDAR scan of large interior venue with stage area" loading="lazy" onclick="openLightbox(this.src)">
+    <img src="images/lidar-010.jpg" alt="LiDAR scan of venue interior with bar and stage" loading="lazy" onclick="openLightbox(this.src)">
+    <img src="images/lidar-009.jpg" alt="LiDAR point cloud of bar area, tables and kitchen from above" loading="lazy" onclick="openLightbox(this.src)">
+    <img src="images/lidar-005.jpg" alt="LiDAR scan of ceiling structure showing beams and lighting rig" loading="lazy" onclick="openLightbox(this.src)">
+    <img src="images/lidar-002.jpg" alt="LiDAR street-level point cloud with trees and buildings" loading="lazy" onclick="openLightbox(this.src)">
+    <img src="images/lidar-004.jpg" alt="LiDAR scan of outdoor venue with structure" loading="lazy" onclick="openLightbox(this.src)">
+    <img src="images/lidar-006.jpg" alt="LiDAR floor plan view from above showing room layout" loading="lazy" onclick="openLightbox(this.src)">
+    <img src="images/lidar-003.jpg" alt="LiDAR interior bar and kitchen scan from above" loading="lazy" onclick="openLightbox(this.src)">
+  </div>
+</section>
+
+<!-- 3D DESIGN SHOWCASE -->
+<section class="bg-dark">
+  <div class="section-header">
+    <h2>3D Design Showcase</h2>
+    <p>Full 3D visualisations created in-house before construction begins</p>
+    <div class="line"></div>
+  </div>
+
+  <div style="max-width:1100px;margin:0 auto 50px;padding:0 30px;">
+    <h3 style="font-family:'Fraunces',serif;color:var(--rice);font-size:20px;margin-bottom:10px;">Tanqueray Terrace — Vinegar Yard</h3>
+    <p style="color:#aaa;margin-bottom:20px;">3D renders of the outdoor bar activation — pergola, floral wall feature, and branded bar counter. Designed and built by SKHB.</p>
+    <div class="gallery-grid">
+      <img src="images/design-tanqueray-001.jpg" alt="Tanqueray Terrace 3D render — bar and floral wall" loading="lazy" onclick="openLightbox(this.src)">
+      <img src="images/design-tanqueray-002.jpg" alt="Tanqueray Terrace 3D render — alternate angle" loading="lazy" onclick="openLightbox(this.src)">
+      <img src="images/design-tanqueray-003.jpg" alt="Tanqueray Terrace 3D render — aerial view of pergola" loading="lazy" onclick="openLightbox(this.src)">
+    </div>
+  </div>
+
+  <div style="max-width:1100px;margin:0 auto;padding:0 30px;">
+    <h3 style="font-family:'Fraunces',serif;color:var(--rice);font-size:20px;margin-bottom:10px;">The Merchant — Beer Garden &amp; Terrace</h3>
+    <p style="color:#aaa;margin-bottom:20px;">Complete outdoor dining and beer garden design — pergola structure, landscaping, sail shades, planters, and waterside terrace seating.</p>
+    <div class="gallery-grid">
+      <img src="images/design-merchant-001.jpg" alt="The Merchant 3D render — aerial view with pergola" loading="lazy" onclick="openLightbox(this.src)">
+      <img src="images/design-merchant-002.jpg" alt="The Merchant 3D render — wider aerial with waterside" loading="lazy" onclick="openLightbox(this.src)">
+      <img src="images/design-merchant-003.jpg" alt="The Merchant 3D render — under pergola seating" loading="lazy" onclick="openLightbox(this.src)">
+      <img src="images/design-merchant-004.jpg" alt="The Merchant 3D render — pergola and paving detail" loading="lazy" onclick="openLightbox(this.src)">
+      <img src="images/design-merchant-005.jpg" alt="The Merchant 3D render — sail shade seating area" loading="lazy" onclick="openLightbox(this.src)">
+      <img src="images/design-merchant-006.jpg" alt="The Merchant 3D render — full terrace with landscaping" loading="lazy" onclick="openLightbox(this.src)">
+      <img src="images/design-merchant-007.jpg" alt="The Merchant 3D render — aerial overview" loading="lazy" onclick="openLightbox(this.src)">
+    </div>
+  </div>
+</section>
+
+<!-- BENEFITS -->
+<section class="bg-dark-alt">
+  <div class="section-header">
+    <h2>Why This Matters</h2>
+    <p>How technology-driven construction benefits your project</p>
+    <div class="line"></div>
+  </div>
+  <div class="benefits-grid">
+    <div class="benefit-card">
+      <h3>Millimetre Accuracy</h3>
+      <p>LiDAR captures your space with precision that tape measures cannot match. Every measurement is exact, eliminating the guesswork that leads to costly errors during construction.</p>
+    </div>
+    <div class="benefit-card">
+      <h3>Fewer Surprises</h3>
+      <p>Hidden pipes, uneven floors, structural quirks — the scan reveals everything before work begins. Problems are solved in the design phase, not on the building site.</p>
+    </div>
+    <div class="benefit-card">
+      <h3>Precise Cost Estimates</h3>
+      <p>When the measurements are exact and the design is finalised digitally, the quote is accurate. No hidden extras, no unexpected variations, no budget overruns.</p>
+    </div>
+    <div class="benefit-card">
+      <h3>Faster Builds</h3>
+      <p>Accurate planning means fewer delays. Materials are ordered to exact specifications, trades are scheduled with confidence, and rework is virtually eliminated.</p>
+    </div>
+    <div class="benefit-card">
+      <h3>Better Communication</h3>
+      <p>A 3D model speaks louder than a flat drawing. Designers, clients and our build team all see the same thing — reducing misunderstandings and keeping everyone aligned.</p>
+    </div>
+    <div class="benefit-card">
+      <h3>Design Confidence</h3>
+      <p>See your finished restaurant before a single wall is built. Make changes digitally, iterate quickly, and commit to a design you know will work in the real space.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section bg-jungle">
+  <h2>See How Technology-Driven Construction<br>Can Transform Your Next Project</h2>
+  <p>Whether you are planning a new restaurant or renovating an existing space, our LiDAR scanning and 3D design process ensures precision from the very first step.</p>
+  <a href="index.html#contact" class="btn">Get In Touch</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <h3>SKHB</h3>
+      <p>Building restaurants worth returning to. London's specialist restaurant construction and fit-out company.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#portfolio">Portfolio</a></li>
+        <li><a href="projects/">Projects</a></li>
+        <li><a href="services/">Services</a></li>
+        <li><a href="design-technology.html">Design &amp; Technology</a></li>
+        <li><a href="blog/">Blog</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-contact">
+      <h4>Get In Touch</h4>
+      <p><a href="mailto:info@skhbconstruction.co.uk">info@skhbconstruction.co.uk</a></p>
+      <p><a href="https://wa.me/447791112982">WhatsApp</a></p>
+      <p style="margin-top:12px;color:var(--stone);font-style:italic">London, UK</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 SKHB Construction Ltd. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- WHATSAPP BUTTON -->
+<a href="https://wa.me/447791112982?text=Hi%20Sununu%2C%20I%20found%20SKHB%20online%20and%20I%27d%20like%20to%20discuss%20a%20project." class="whatsapp-float" aria-label="Chat on WhatsApp" target="_blank" rel="noopener">
+  <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16.004 0h-.008C7.174 0 0 7.176 0 16c0 3.5 1.128 6.744 3.046 9.378L1.054 31.29l6.118-1.958A15.9 15.9 0 0016.004 32C24.826 32 32 24.822 32 16S24.826 0 16.004 0zm9.312 22.594c-.39 1.1-1.932 2.012-3.182 2.278-.856.18-1.974.324-5.738-1.234-4.818-1.994-7.916-6.878-8.156-7.196-.23-.318-1.932-2.572-1.932-4.904s1.222-3.478 1.656-3.956c.434-.478.948-.598 1.264-.598.316 0 .632.002.908.016.292.016.682-.11 1.068.814.39.94 1.33 3.272 1.448 3.51.118.24.196.518.04.836-.16.318-.24.518-.478.796-.24.278-.504.622-.72.834-.24.24-.488.502-.21.984.278.478 1.238 2.042 2.658 3.31 1.826 1.632 3.366 2.138 3.844 2.376.478.24.756.2 1.034-.118.278-.318 1.194-1.392 1.512-1.87.318-.478.636-.398 1.074-.24.434.16 2.768 1.304 3.244 1.542.478.24.796.358.914.556.118.196.118 1.14-.272 2.24z"/></svg>
+</a>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <img id="lightboxImg" src="" alt="Full size image">
+</div>
+
+<script>
+function openLightbox(src) {
+  document.getElementById('lightboxImg').src = src;
+  document.getElementById('lightbox').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('active');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+document.querySelectorAll('.nav-links a').forEach(a => {
+  a.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open'));
+});
+</script>
+
+</body>
+</html>

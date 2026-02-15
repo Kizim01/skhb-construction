@@ -793,6 +793,7 @@ footer {
   .logos-strip { gap: 24px; }
   .logo-item { font-size: 15px; }
   .services-grid { grid-template-columns: 1fr; gap: 20px; }
+  #services [style*="grid-template-columns:1fr 1fr"] { grid-template-columns: 1fr !important; }
   .carousel-track img { height: 280px; }
   .project-header { flex-direction: column; gap: 4px; }
   .featured { grid-template-columns: 1fr; }
@@ -1053,6 +1054,7 @@ footer {
     <li><a href="#portfolio">Portfolio</a></li>
     <li><a href="projects/">Projects</a></li>
     <li><a href="services/">Services</a></li>
+    <li><a href="design-technology.html">Technology</a></li>
     <li><a href="blog/">Blog</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
@@ -1475,6 +1477,16 @@ footer {
       <a href="services/maintenance.html" style="display:inline-block;margin-top:12px;font-size:13px;color:var(--jungle);text-decoration:none;font-family:'Fraunces',serif;letter-spacing:0.3px;transition:color 0.3s">Learn More &rarr;</a>
     </div>
   </div>
+  <!-- TECHNOLOGY BANNER -->
+  <div style="max-width:1060px;margin:40px auto 0;background:var(--volcanic);border-radius:6px;overflow:hidden;display:grid;grid-template-columns:1fr 1fr;box-shadow:0 2px 16px rgba(0,0,0,0.08)">
+    <img src="images/lidar-007.jpg" alt="LiDAR 3D scanning for restaurant construction" style="width:100%;height:100%;object-fit:cover;min-height:220px" loading="lazy">
+    <div style="padding:40px;display:flex;flex-direction:column;justify-content:center">
+      <h3 style="font-family:'Fraunces',serif;font-size:22px;color:var(--linen);margin-bottom:8px">LiDAR Scanning &amp; 3D Design</h3>
+      <p style="font-size:14px;color:rgba(255,255,255,0.7);margin-bottom:16px;line-height:1.6">We use LiDAR 3D scanning and SketchUp modelling to plan every build with millimetre accuracy — the only small restaurant builder in London doing this.</p>
+      <a href="design-technology.html" style="display:inline-block;font-size:13px;color:var(--rice);text-decoration:none;font-family:'Fraunces',serif;letter-spacing:0.3px;transition:color 0.3s">Explore Our Technology &rarr;</a>
+    </div>
+  </div>
+
   <div class="specialist-tags">
     <span class="specialist-tag">Tiling</span>
     <span class="specialist-tag">Flooring</span>
@@ -1641,6 +1653,7 @@ footer {
         <li><a href="#portfolio">Portfolio</a></li>
         <li><a href="projects/">Projects</a></li>
         <li><a href="services/">Services</a></li>
+        <li><a href="design-technology.html">Design &amp; Technology</a></li>
         <li><a href="blog/">Blog</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
